@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Website Pembelajaran</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="menu-btn" id="logo-btn">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" id="logo-img">
+                </div>
+            </a>
+            <div class="menu-btn" id="tutorial-btn">
+                Tutorials
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-btn" id="references-btn">
+                References
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-btn" id="exercises-btn">
+                Exercises
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="DarkMode" id="light-dark-toggle">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+            <a href="login.html" class="btn bg-yellow">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Navigasi Pop-up (Tutorials) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-tutorials">
+        <div class="nested-navigation-close-btn" id="close-btn-tutorials">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>Tutorials</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="materi/bab1.html">Pendahuluan</a>
+                    <a href="materi/bab1.html#struktur">Struktur Dasar</a>
+                    <a href="materi/bab1.html#tags">Tags</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="materi/bab2.html">Pengenalan CSS</a>
+                    <a href="materi/bab2.html#selectors">Selectors</a>
+                    <a href="materi/bab2.html#properties">Properties</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="materi/bab3.html">Dasar JavaScript</a>
+                    <a href="materi/bab3.html#functions">Functions</a>
+                    <a href="materi/bab3.html#dom">DOM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasi Pop-up (References) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-references">
+        <div class="nested-navigation-close-btn" id="close-btn-references">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>References</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="materi/bab1.html#references">HTML Tags</a>
+                    <a href="materi/bab1.html#references">HTML Attributes</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="materi/bab2.html#references">CSS Properties</a>
+                    <a href="materi/bab2.html#references">CSS Selectors</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="materi/bab3.html#references">JS Methods</a>
+                    <a href="materi/bab3.html#references">JS Objects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasi Pop-up (Exercises) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-exercises">
+        <div class="nested-navigation-close-btn" id="close-btn-exercises">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>Exercises</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="materi/bab1.html#exercises">HTML Exercises</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="materi/bab2.html#exercises">CSS Exercises</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="materi/bab3.html#exercises">JS Exercises</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="homepage-container">
+        <div class="hero-section">
+            <h1><i class="fa-solid fa-info-circle"></i> About Us</h1>
+            <p class="subtitle">
+                Website Pembelajaran - Tempat terbaik untuk belajar web development
+            </p>
+        </div>
+
+        <h2>Tentang Website Ini</h2>
+        <p>
+            Website Pembelajaran adalah platform edukasi yang didedikasikan untuk membantu Anda 
+            mempelajari teknologi web development dari dasar. Kami menyediakan tutorial yang 
+            mudah dipahami, referensi yang lengkap, dan latihan interaktif untuk mempertajam 
+            kemampuan Anda.
+        </p>
+
+        <h2>Misi Kami</h2>
+        <p>
+            Misi kami adalah membuat pembelajaran web development dapat diakses oleh semua orang, 
+            dari pemula hingga yang sudah berpengalaman. Kami percaya bahwa setiap orang dapat 
+            belajar membuat website dengan pendekatan yang tepat dan materi yang berkualitas.
+        </p>
+
+        <h2>Apa yang Kami Tawarkan</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Tutorial Berkualitas</h3>
+                <p>
+                    Tutorial yang disusun secara sistematis dan mudah dipahami, dimulai dari 
+                    konsep dasar hingga tingkat lanjut.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fa-solid fa-book"></i> Referensi Lengkap</h3>
+                <p>
+                    Dokumentasi dan referensi lengkap untuk HTML, CSS, dan JavaScript yang 
+                    dapat Anda akses kapan saja.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fa-solid fa-laptop-code"></i> Latihan Praktis</h3>
+                <p>
+                    Latihan dan exercises untuk mengasah kemampuan coding Anda dengan 
+                    praktik langsung.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Materi yang Tersedia</h2>
+        <div class="tech-grid">
+            <a href="materi/bab1.html" class="tech-item">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Pelajari struktur dan markup untuk membuat halaman web.</p>
+            </a>
+            <a href="materi/bab2.html" class="tech-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Kuasai styling dan desain untuk mempercantik website Anda.</p>
+            </a>
+            <a href="materi/bab3.html" class="tech-item">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Buat website interaktif dan dinamis dengan JavaScript.</p>
+            </a>
+            <a href="contact.html" class="tech-item">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Contact Us</h3>
+                <p>Hubungi kami jika ada pertanyaan atau saran.</p>
+            </a>
+        </div>
+
+        <hr>
+
+        <h2>Mulai Belajar Sekarang!</h2>
+        <p style="text-align: center; margin-bottom: 20px;">
+            Siap untuk memulai perjalanan Anda dalam web development? 
+            Klik tombol di bawah ini untuk memulai!
+        </p>
+        <div style="text-align: center;">
+            <a href="materi/bab1.html" class="cta-button" style="display: inline-block; text-decoration: none;">
+                <i class="fa-solid fa-rocket"></i> Mulai Belajar
+            </a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

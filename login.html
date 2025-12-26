@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Website Pembelajaran</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="menu-btn" id="logo-btn">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" id="logo-img">
+                </div>
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="DarkMode" id="light-dark-toggle">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+            <a href="index.html" class="btn bg-pink">Back to Home</a>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h1>Sign in</h1>
+            <p class="auth-subtitle">Get access to more learning features</p>
+
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i> Sign in
+                </button>
+            </form>
+
+            <div class="auth-divider">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

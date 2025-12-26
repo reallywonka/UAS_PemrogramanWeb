@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pembelajaran - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="menu-btn" id="logo-btn">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" id="logo-img">
+                </div>
+            </a>
+            <div class="menu-btn" id="tutorial-btn">
+                Tutorials
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-btn" id="references-btn">
+                References
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-btn" id="exercises-btn">
+                Exercises
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="DarkMode" id="light-dark-toggle">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+            <a href="login.html" class="btn bg-yellow">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Navigasi Pop-up (Tutorials) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-tutorials">
+        <div class="nested-navigation-close-btn" id="close-btn-tutorials">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>Tutorials</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="materi/bab1.html">Pendahuluan</a>
+                    <a href="materi/bab1.html">Struktur Dasar</a>
+                    <a href="materi/bab1.html">Tags</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="materi/bab2.html">Pengenalan CSS</a>
+                    <a href="materi/bab2.html">Selectors</a>
+                    <a href="materi/bab2.html">Properties</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="materi/bab3.html">Dasar JavaScript</a>
+                    <a href="materi/bab3.html">Functions</a>
+                    <a href="materi/bab3.html">DOM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasi Pop-up (References) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-references">
+        <div class="nested-navigation-close-btn" id="close-btn-references">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>References</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="materi/bab1.html#references">HTML Tags</a>
+                    <a href="materi/bab1.html#references">HTML Attributes</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="materi/bab2.html#references">CSS Properties</a>
+                    <a href="materi/bab2.html#references">CSS Selectors</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="materi/bab3.html#references">JS Methods</a>
+                    <a href="materi/bab3.html#references">JS Objects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasi Pop-up (Exercises) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-exercises">
+        <div class="nested-navigation-close-btn" id="close-btn-exercises">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>Exercises</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="materi/bab1.html#exercises">HTML Exercises</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="materi/bab2.html#exercises">CSS Exercises</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="materi/bab3.html#exercises">JS Exercises</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homepage Content -->
+    <div class="homepage-container">
+        <div class="hero-section">
+            <img src="images/logo.png" alt="Logo" class="homepage-logo" id="homepage-logo">
+            <h1>Create Your First Website Today!</h1>
+            <p class="subtitle">
+                Web design is actually easier than you think. Start from zero and bring
+                your creative ideas to life as a stylish web page.
+            </p>
+            <button class="cta-button" id="home-start-btn">
+                <i class="fa-solid fa-rocket"></i> Start your Adventures!
+            </button>
+        </div>
+
+        <hr>
+
+        <h2>Apa yang Akan Dipelajari?</h2>
+        <div class="tech-grid">
+            <a href="materi/bab1.html" class="tech-item">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Struktur dasar dan pondasi dari semua halaman web.</p>
+            </a>
+            <a href="materi/bab2.html" class="tech-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Cara mempercantik dan mendesain tampilan website Anda.</p>
+            </a>
+            <a href="materi/bab3.html" class="tech-item">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Membuat website menjadi interaktif dan dinamis.</p>
+            </a>
+            <a href="about.html" class="tech-item">
+                <i class="fa-solid fa-palette"></i>
+                <h3>About Us</h3>
+                <p>Informasi tentang website pembelajaran ini.</p>
+            </a>
+        </div>
+
+        <hr>
+
+        <h2>Fitur Utama</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3><i class="fa-solid fa-book-open"></i> Tutorials</h3>
+                <p>
+                    Panduan mendalam dan langkah demi langkah untuk mempelajari
+                    teknologi web dari dasar.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fa-solid fa-list-ul"></i> References</h3>
+                <p>
+                    Contekan cepat untuk melihat referensi sintaks, tag, dan
+                    properti.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fa-solid fa-pencil"></i> Exercises</h3>
+                <p>
+                    Uji pemahaman Anda dengan latihan interaktif untuk mempertajam
+                    kemampuan.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

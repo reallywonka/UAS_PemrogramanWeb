@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - Website Pembelajaran</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../index.html" class="menu-btn" id="logo-btn">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="Logo" id="logo-img">
+                </div>
+            </a>
+            <div class="menu-btn" id="tutorial-btn">
+                Tutorials
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-btn" id="references-btn">
+                References
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-btn" id="exercises-btn">
+                Exercises
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="DarkMode" id="light-dark-toggle">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+            <a href="../login.html" class="btn bg-yellow">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Navigasi Pop-up (Tutorials) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-tutorials">
+        <div class="nested-navigation-close-btn" id="close-btn-tutorials">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>Tutorials</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="bab1.html">Pendahuluan</a>
+                    <a href="bab1.html#struktur">Struktur Dasar</a>
+                    <a href="bab1.html#tags">Tags</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="bab2.html">Pengenalan CSS</a>
+                    <a href="bab2.html#selectors">Selectors</a>
+                    <a href="bab2.html#properties">Properties</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="bab3.html">Dasar JavaScript</a>
+                    <a href="bab3.html#functions">Functions</a>
+                    <a href="bab3.html#dom">DOM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasi Pop-up (References) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-references">
+        <div class="nested-navigation-close-btn" id="close-btn-references">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>References</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="bab1.html#references">HTML Tags</a>
+                    <a href="bab1.html#references">HTML Attributes</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="bab2.html#references">CSS Properties</a>
+                    <a href="bab2.html#references">CSS Selectors</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="bab3.html#references">JS Methods</a>
+                    <a href="bab3.html#references">JS Objects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasi Pop-up (Exercises) -->
+    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-exercises">
+        <div class="nested-navigation-close-btn" id="close-btn-exercises">
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="nested-navigation-content">
+            <h1>Exercises</h1>
+            <div class="nested-navigation-content-data">
+                <div class="nested-navigation-item">
+                    <h2>HTML</h2>
+                    <a href="bab1.html#exercises">HTML Exercises</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>CSS</h2>
+                    <a href="bab2.html#exercises">CSS Exercises</a>
+                </div>
+                <div class="nested-navigation-item">
+                    <h2>JavaScript</h2>
+                    <a href="bab3.html#exercises">JS Exercises</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container with Sidebar -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>JavaScript</h2>
+            <ul>
+                <li><a href="#pengenalan" class="active">Pengenalan</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#dom">DOM</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#exercises">Exercises</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            <h1 id="pengenalan">Pengenalan JavaScript</h1>
+            <p>
+                JavaScript adalah bahasa pemrograman web. JavaScript dapat mengubah konten HTML, 
+                mengubah nilai atribut HTML, mengubah style CSS, dan dapat menyembunyikan atau menampilkan elemen HTML.
+            </p>
+            <p>
+                JavaScript adalah bahasa pemrograman yang paling populer di dunia. JavaScript 
+                mudah dipelajari dan JavaScript bekerja di semua platform.
+            </p>
+
+            <h2 id="syntax">JavaScript Syntax</h2>
+            <p>
+                JavaScript syntax adalah kumpulan aturan bagaimana program JavaScript dikonstruksi.
+            </p>
+            <pre><code>// Ini adalah komentar single-line
+
+/* Ini adalah komentar
+   multi-line */
+
+// Statement JavaScript
+var x = 5;
+var y = 6;
+var z = x + y;</code></pre>
+
+            <h3>JavaScript Statements</h3>
+            <p>
+                Program JavaScript adalah daftar dari "statements" yang akan dieksekusi oleh komputer.
+            </p>
+            <pre><code>var x, y, z;    // Statement 1
+x = 5;          // Statement 2
+y = 6;          // Statement 3
+z = x + y;      // Statement 4</code></pre>
+
+            <h2 id="variables">JavaScript Variables</h2>
+            <p>
+                Variables adalah "kontainer" untuk menyimpan nilai data. Di JavaScript, Anda dapat 
+                mendeklarasikan variables menggunakan <code>var</code>, <code>let</code>, atau <code>const</code>.
+            </p>
+
+            <h3>var</h3>
+            <pre><code>var x = 5;
+var y = "Hello";</code></pre>
+
+            <h3>let</h3>
+            <p>Diperkenalkan di ES6 (2015), direkomendasikan untuk variable yang nilainya akan berubah:</p>
+            <pre><code>let x = 5;
+let y = "Hello";</code></pre>
+
+            <h3>const</h3>
+            <p>Digunakan untuk variable yang nilainya tidak akan berubah:</p>
+            <pre><code>const PI = 3.14159;
+const greeting = "Hello World";</code></pre>
+
+            <h2 id="functions">JavaScript Functions</h2>
+            <p>
+                Function JavaScript adalah blok kode yang dirancang untuk melakukan tugas tertentu. 
+                Function JavaScript dieksekusi ketika "sesuatu" memanggilnya (memanggil/invoke).
+            </p>
+
+            <h3>Function Syntax</h3>
+            <pre><code>function myFunction(p1, p2) {
+    return p1 * p2;   // Function mengembalikan hasil dari p1 * p2
+}
+
+// Memanggil function
+var result = myFunction(4, 3);  // result = 12</code></pre>
+
+            <h3>Arrow Functions (ES6)</h3>
+            <p>Arrow function adalah cara singkat untuk menulis function:</p>
+            <pre><code>// Function tradisional
+function hello() {
+    return "Hello World!";
+}
+
+// Arrow function
+const hello = () => {
+    return "Hello World!";
+}
+
+// Arrow function lebih singkat
+const hello = () => "Hello World!";</code></pre>
+
+            <h2 id="events">JavaScript Events</h2>
+            <p>
+                HTML events adalah "hal-hal" yang terjadi pada elemen HTML. Ketika JavaScript 
+                digunakan di halaman HTML, JavaScript dapat "bereaksi" terhadap events tersebut.
+            </p>
+
+            <h3>Event Examples</h3>
+            <ul>
+                <li>Ketika user mengklik mouse</li>
+                <li>Ketika halaman web telah dimuat</li>
+                <li>Ketika gambar telah dimuat</li>
+                <li>Ketika mouse bergerak di atas elemen</li>
+                <li>Ketika input field diubah</li>
+                <li>Ketika form HTML di-submit</li>
+            </ul>
+
+            <h3>Contoh Event Handler</h3>
+            <pre><code>&lt;button onclick="myFunction()"&gt;Click me&lt;/button&gt;
+
+&lt;script&gt;
+function myFunction() {
+    alert("Button was clicked!");
+}
+&lt;/script&gt;</code></pre>
+
+            <h2 id="dom">JavaScript DOM</h2>
+            <p>
+                DOM (Document Object Model) adalah programming interface untuk HTML dan XML documents. 
+                DOM merepresentasikan halaman sehingga program dapat mengubah struktur, style, dan konten dokumen.
+            </p>
+
+            <h3>Finding HTML Elements</h3>
+            <pre><code>// Menemukan elemen berdasarkan ID
+var element = document.getElementById("myId");
+
+// Menemukan elemen berdasarkan class
+var elements = document.getElementsByClassName("myClass");
+
+// Menemukan elemen berdasarkan tag name
+var elements = document.getElementsByTagName("p");
+
+// Menemukan elemen dengan CSS selector
+var element = document.querySelector(".myClass");
+var elements = document.querySelectorAll("p");</code></pre>
+
+            <h3>Changing HTML Content</h3>
+            <pre><code>// Mengubah konten HTML
+document.getElementById("myId").innerHTML = "New content!";
+
+// Mengubah nilai atribut
+document.getElementById("myImage").src = "newimage.jpg";</code></pre>
+
+            <h3>Changing CSS Style</h3>
+            <pre><code>// Mengubah style CSS
+document.getElementById("myId").style.color = "red";
+document.getElementById("myId").style.fontSize = "20px";
+document.getElementById("myId").style.display = "none";</code></pre>
+
+            <h2 id="references">References</h2>
+            <h3>JavaScript Methods yang Sering Digunakan</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead>
+                    <tr style="background-color: var(--sidebar-bg); border: 1px solid var(--border-color);">
+                        <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">Method</th>
+                        <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border: 1px solid var(--border-color);">
+                        <td style="padding: 10px; border: 1px solid var(--border-color);"><code>getElementById()</code></td>
+                        <td style="padding: 10px; border: 1px solid var(--border-color);">Menemukan elemen berdasarkan ID</td>
+                    </tr>
+                    <tr style="border: 1px solid var(--border-color);">
+                        <td style="padding: 10px; border: 1px solid var(--border-color);"><code>querySelector()</code></td>
+                        <td style="padding: 10px; border: 1px solid var(--border-color);">Menemukan elemen dengan CSS selector</td>
+                    </tr>
+                    <tr style="border: 1px solid var(--border-color);">
+                        <td style="padding: 10px; border: 1px solid var(--border-color);"><code>addEventListener()</code></td>
+                        <td style="padding: 10px; border: 1px solid var(--border-color);">Menambahkan event listener ke elemen</td>
+                    </tr>
+                    <tr style="border: 1px solid var(--border-color);">
+                        <td style="padding: 10px; border: 1px solid var(--border-color);"><code>innerHTML</code></td>
+                        <td style="padding: 10px; border: 1px solid var(--border-color);">Mendapatkan/mengatur konten HTML elemen</td>
+                    </tr>
+                    <tr style="border: 1px solid var(--border-color);">
+                        <td style="padding: 10px; border: 1px solid var(--border-color);"><code>classList</code></td>
+                        <td style="padding: 10px; border: 1px solid var(--border-color);">Mengelola class CSS dari elemen</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="exercises">Exercises</h2>
+            <h3>Latihan 1: Hello World</h3>
+            <p>Buat halaman HTML dengan button yang menampilkan alert "Hello World" ketika diklik.</p>
+            <pre><code>&lt;button onclick="alert('Hello World')"&gt;Click Me&lt;/button&gt;</code></pre>
+
+            <h3>Latihan 2: Mengubah Konten</h3>
+            <ol>
+                <li>Buat paragraf dengan id="demo" yang berisi teks "Original Text"</li>
+                <li>Buat button yang mengubah teks paragraf menjadi "Text Changed!"</li>
+                <li>Gunakan <code>getElementById()</code> dan <code>innerHTML</code></li>
+            </ol>
+
+            <h3>Latihan 3: Mengubah Style</h3>
+            <p>Buat button yang mengubah warna background halaman menjadi kuning ketika diklik.</p>
+
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+                <a href="bab2.html" style="padding: 10px 15px; border: 1px solid var(--border-color); border-radius: 5px; text-decoration: none; color: var(--bs-black); font-weight: 600;">
+                    ← Prev: CSS
+                </a>
+                <a href="../about.html" style="padding: 10px 15px; border: 1px solid var(--border-color); border-radius: 5px; text-decoration: none; color: var(--bs-black); font-weight: 600;">
+                    Next: About →
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
