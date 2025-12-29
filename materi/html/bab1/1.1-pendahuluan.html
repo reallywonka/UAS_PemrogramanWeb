@@ -5,27 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1.1 Pendahuluan HTML - Website Pembelajaran</title>
     <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="header-left">
+        <div class="nav-left">
             <a href="../../../index.html" class="menu-btn" id="logo-btn">
                 <div class="logo">
-                    <img src="../../../images/logo.png" alt="Logo" id="logo-img">
+                    <img src="../../../images/logo.png" alt="Logo">
                 </div>
             </a>
             
-            <!-- Dropdown Navigation HTML -->
             <div class="dropdown">
-                <button class="menu-btn dropdown-toggle">
-                    HTML <i class="fa-solid fa-caret-down"></i>
+                <button class="menu-btn">
+                    HTML <span class="arrow">▼</span>
                 </button>
-                <div class="dropdown-menu">
-                    <div class="dropdown-section">
+                <div class="menu">
+                    <div class="menu-section">
                         <h3>BAB 1</h3>
                         <a href="1.1-pendahuluan.html" class="active">1.1 Pendahuluan</a>
                         <a href="1.2-struktur-dasar.html">1.2 Struktur Dasar</a>
@@ -36,13 +34,12 @@
                 </div>
             </div>
 
-            <!-- Dropdown Navigation CSS -->
             <div class="dropdown">
-                <button class="menu-btn dropdown-toggle">
-                    CSS <i class="fa-solid fa-caret-down"></i>
+                <button class="menu-btn">
+                    CSS <span class="arrow">▼</span>
                 </button>
-                <div class="dropdown-menu">
-                    <div class="dropdown-section">
+                <div class="menu">
+                    <div class="menu-section">
                         <h3>BAB 1</h3>
                         <a href="../../css/bab1/1.1-pengenalan.html">1.1 Pengenalan CSS</a>
                         <a href="../../css/bab1/1.2-syntax.html">1.2 Syntax CSS</a>
@@ -53,13 +50,12 @@
                 </div>
             </div>
 
-            <!-- Dropdown Navigation JavaScript -->
             <div class="dropdown">
-                <button class="menu-btn dropdown-toggle">
-                    JavaScript <i class="fa-solid fa-caret-down"></i>
+                <button class="menu-btn">
+                    JavaScript <span class="arrow">▼</span>
                 </button>
-                <div class="dropdown-menu">
-                    <div class="dropdown-section">
+                <div class="menu">
+                    <div class="menu-section">
                         <h3>BAB 1</h3>
                         <a href="../../javascript/bab1/1.1-pengenalan.html">1.1 Pengenalan JS</a>
                         <a href="../../javascript/bab1/1.2-syntax.html">1.2 Syntax JS</a>
@@ -69,24 +65,26 @@
                     </div>
                 </div>
             </div>
+
+            <a href="../../../about.html" class="menu-btn">About</a>
+            <a href="../../../contact.html" class="menu-btn">Contact</a>
         </div>
         
-        <div class="header-right">
-            <div class="DarkMode" id="light-dark-toggle">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+        <div class="nav-right">
+            <div class="dark-mode" id="dark-toggle">
+                <span class="icon">🌓</span>
             </div>
-            <a href="../../../login.html" class="btn bg-yellow">Sign In</a>
         </div>
     </header>
 
     <!-- Main Content -->
     <div class="content-wrapper">
-        <main class="content-area-full">
+        <main class="content">
             <div class="breadcrumb">
                 <a href="../../../index.html">Home</a> 
-                <i class="fa-solid fa-chevron-right"></i>
+                <span>›</span>
                 <a href="../../../index.html">HTML</a>
-                <i class="fa-solid fa-chevron-right"></i>
+                <span>›</span>
                 <span>BAB 1 - 1.1 Pendahuluan</span>
             </div>
 
@@ -134,8 +132,8 @@
                 <li><strong>Karir</strong> - Skill HTML sangat dibutuhkan di industri teknologi</li>
             </ol>
 
-            <div class="info-box">
-                <h3><i class="fa-solid fa-lightbulb"></i> Tips</h3>
+            <div class="box-tip">
+                <h3><span class="icon">💡</span> Tips</h3>
                 <p>
                     HTML bukanlah bahasa pemrograman, melainkan <strong>bahasa markup</strong>. 
                     HTML menggunakan "tags" untuk menandai berbagai jenis konten.
@@ -143,16 +141,44 @@
             </div>
 
             <!-- Navigation -->
-            <div class="page-navigation">
-                <a href="../../../index.html" class="nav-btn prev">
-                    <i class="fa-solid fa-arrow-left"></i> Home
+            <div class="nav-page">
+                <a href="../../../index.html" class="btn-nav prev">
+                    <span>←</span> Home
                 </a>
-                <a href="1.2-struktur-dasar.html" class="nav-btn next">
-                    1.2 Struktur Dasar <i class="fa-solid fa-arrow-right"></i>
+                <a href="1.2-struktur-dasar.html" class="btn-nav next">
+                    1.2 Struktur Dasar <span>→</span>
                 </a>
             </div>
         </main>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cascode Simple Steps</h3>
+                <p>From a blank file to a beautiful site. Master the building blocks of the web, one step at a time.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <a href="../../../index.html">Home</a>
+                <a href="../../../about.html">About</a>
+                <a href="../../../contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Materi</h3>
+                <a href="1.1-pendahuluan.html">HTML</a>
+                <a href="../../css/bab1/1.1-pengenalan.html">CSS</a>
+                <a href="../../javascript/bab1/1.1-pengenalan.html">JavaScript</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cascode Simple Steps. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="../../../js/script.js"></script>
 </body>

@@ -5,201 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Website Pembelajaran</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="header-left">
+        <div class="nav-left">
             <a href="index.html" class="menu-btn" id="logo-btn">
                 <div class="logo">
-                    <img src="images/logo.png" alt="Logo" id="logo-img">
+                    <img src="images/logo.png" alt="Logo">
                 </div>
             </a>
-            <div class="menu-btn" id="tutorial-btn">
-                Tutorials
-                <i class="fa-solid fa-caret-down"></i>
+            
+            <div class="dropdown">
+                <button class="menu-btn">
+                    HTML <span class="arrow">▼</span>
+                </button>
+                <div class="menu">
+                    <div class="menu-section">
+                        <h3>BAB 1</h3>
+                        <a href="materi/html/bab1/1.1-pendahuluan.html">1.1 Pendahuluan</a>
+                        <a href="materi/html/bab1/1.2-struktur-dasar.html">1.2 Struktur Dasar</a>
+                        <a href="materi/html/bab1/1.3-tags.html">1.3 Tags HTML</a>
+                        <a href="materi/html/bab1/1.4-atribut.html">1.4 Atribut</a>
+                        <a href="materi/html/bab1/1.5-heading-paragraf.html">1.5 Heading & Paragraf</a>
+                    </div>
+                </div>
             </div>
-            <div class="menu-btn" id="references-btn">
-                References
-                <i class="fa-solid fa-caret-down"></i>
+
+            <div class="dropdown">
+                <button class="menu-btn">
+                    CSS <span class="arrow">▼</span>
+                </button>
+                <div class="menu">
+                    <div class="menu-section">
+                        <h3>BAB 1</h3>
+                        <a href="materi/css/bab1/1.1-pengenalan.html">1.1 Pengenalan CSS</a>
+                        <a href="materi/css/bab1/1.2-syntax.html">1.2 Syntax CSS</a>
+                        <a href="materi/css/bab1/1.3-selectors.html">1.3 Selectors</a>
+                        <a href="materi/css/bab1/1.4-colors.html">1.4 Colors</a>
+                        <a href="materi/css/bab1/1.5-box-model.html">1.5 Box Model</a>
+                    </div>
+                </div>
             </div>
-            <div class="menu-btn" id="exercises-btn">
-                Exercises
-                <i class="fa-solid fa-caret-down"></i>
+
+            <div class="dropdown">
+                <button class="menu-btn">
+                    JavaScript <span class="arrow">▼</span>
+                </button>
+                <div class="menu">
+                    <div class="menu-section">
+                        <h3>BAB 1</h3>
+                        <a href="materi/javascript/bab1/1.1-pengenalan.html">1.1 Pengenalan JS</a>
+                        <a href="materi/javascript/bab1/1.2-syntax.html">1.2 Syntax JS</a>
+                        <a href="materi/javascript/bab1/1.3-variables.html">1.3 Variables</a>
+                        <a href="materi/javascript/bab1/1.4-functions.html">1.4 Functions</a>
+                        <a href="materi/javascript/bab1/1.5-dom.html">1.5 DOM</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="header-right">
-            <div class="DarkMode" id="light-dark-toggle">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+        
+        <div class="nav-right">
+            <div class="dark-mode" id="dark-toggle">
+                <span class="icon">🌓</span>
             </div>
-            <a href="login.html" class="btn bg-yellow">Sign In</a>
         </div>
     </header>
 
-    <!-- Navigasi Pop-up (Tutorials) -->
-    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-tutorials">
-        <div class="nested-navigation-close-btn" id="close-btn-tutorials">
-            <button><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="nested-navigation-content">
-            <h1>Tutorials</h1>
-            <div class="nested-navigation-content-data">
-                <div class="nested-navigation-item">
-                    <h2>HTML</h2>
-                    <a href="materi/bab1.html">Pendahuluan</a>
-                    <a href="materi/bab1.html#struktur">Struktur Dasar</a>
-                    <a href="materi/bab1.html#tags">Tags</a>
-                </div>
-                <div class="nested-navigation-item">
-                    <h2>CSS</h2>
-                    <a href="materi/bab2.html">Pengenalan CSS</a>
-                    <a href="materi/bab2.html#selectors">Selectors</a>
-                    <a href="materi/bab2.html#properties">Properties</a>
-                </div>
-                <div class="nested-navigation-item">
-                    <h2>JavaScript</h2>
-                    <a href="materi/bab3.html">Dasar JavaScript</a>
-                    <a href="materi/bab3.html#functions">Functions</a>
-                    <a href="materi/bab3.html#dom">DOM</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigasi Pop-up (References) -->
-    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-references">
-        <div class="nested-navigation-close-btn" id="close-btn-references">
-            <button><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="nested-navigation-content">
-            <h1>References</h1>
-            <div class="nested-navigation-content-data">
-                <div class="nested-navigation-item">
-                    <h2>HTML</h2>
-                    <a href="materi/bab1.html#references">HTML Tags</a>
-                    <a href="materi/bab1.html#references">HTML Attributes</a>
-                </div>
-                <div class="nested-navigation-item">
-                    <h2>CSS</h2>
-                    <a href="materi/bab2.html#references">CSS Properties</a>
-                    <a href="materi/bab2.html#references">CSS Selectors</a>
-                </div>
-                <div class="nested-navigation-item">
-                    <h2>JavaScript</h2>
-                    <a href="materi/bab3.html#references">JS Methods</a>
-                    <a href="materi/bab3.html#references">JS Objects</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigasi Pop-up (Exercises) -->
-    <div class="nested-navigation nested_navigation_hidden" id="nested-navigation-exercises">
-        <div class="nested-navigation-close-btn" id="close-btn-exercises">
-            <button><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="nested-navigation-content">
-            <h1>Exercises</h1>
-            <div class="nested-navigation-content-data">
-                <div class="nested-navigation-item">
-                    <h2>HTML</h2>
-                    <a href="materi/bab1.html#exercises">HTML Exercises</a>
-                </div>
-                <div class="nested-navigation-item">
-                    <h2>CSS</h2>
-                    <a href="materi/bab2.html#exercises">CSS Exercises</a>
-                </div>
-                <div class="nested-navigation-item">
-                    <h2>JavaScript</h2>
-                    <a href="materi/bab3.html#exercises">JS Exercises</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Contact Content -->
-    <div class="auth-container" style="min-height: calc(100vh - 80px);">
-        <div class="auth-box" style="max-width: 600px;">
-            <h1><i class="fa-solid fa-envelope"></i> Contact Us</h1>
-            <p class="auth-subtitle">
+    <div class="form-container">
+        <div class="form-box">
+            <h1><span class="icon">✉️</span> Contact Us</h1>
+            <p class="subtitle">
                 Ada pertanyaan atau saran? Kami senang mendengar dari Anda!
             </p>
 
-            <form id="contact-form" class="auth-form">
-                <div class="form-group">
-                    <label for="contact-name">
-                        <i class="fa-solid fa-user"></i> Nama Lengkap
+            <form id="contact-form" class="form">
+                <div class="input-group">
+                    <label for="name">
+                        <span class="icon">👤</span> Nama Lengkap
                     </label>
-                    <input type="text" id="contact-name" placeholder="Masukkan nama Anda" required>
+                    <input type="text" id="name" placeholder="Masukkan nama Anda" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="contact-email">
-                        <i class="fa-solid fa-envelope"></i> Email
+                <div class="input-group">
+                    <label for="email">
+                        <span class="icon">✉️</span> Email
                     </label>
-                    <input type="email" id="contact-email" placeholder="Masukkan email Anda" required>
+                    <input type="email" id="email" placeholder="Masukkan email Anda" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="contact-subject">
-                        <i class="fa-solid fa-tag"></i> Subjek
+                <div class="input-group">
+                    <label for="subject">
+                        <span class="icon">🏷️</span> Subjek
                     </label>
-                    <input type="text" id="contact-subject" placeholder="Subjek pesan" required>
+                    <input type="text" id="subject" placeholder="Subjek pesan" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="contact-message">
-                        <i class="fa-solid fa-message"></i> Pesan
+                <div class="input-group">
+                    <label for="message">
+                        <span class="icon">💬</span> Pesan
                     </label>
-                    <textarea 
-                        id="contact-message" 
-                        rows="6" 
-                        placeholder="Tulis pesan Anda di sini..."
-                        style="padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 16px; font-family: 'Roboto', sans-serif; background-color: var(--bs-white); color: var(--bs-black); resize: vertical; width: 100%;"
-                        required
-                    ></textarea>
+                    <textarea id="message" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
                 </div>
 
-                <button type="submit" class="auth-btn">
-                    <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+                <button type="submit" class="btn">
+                    <span class="icon">✈️</span> Kirim Pesan
                 </button>
             </form>
 
-            <div class="auth-divider">
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--gray);">
                 <p>Atau hubungi kami melalui:</p>
-                <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px;">
-                    <a href="mailto:info@websitepembelajaran.com" style="color: var(--bs-black); font-size: 24px;">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="#" style="color: var(--bs-black); font-size: 24px;">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="#" style="color: var(--bs-black); font-size: 24px;">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" style="color: var(--bs-black); font-size: 24px;">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
+                <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px; font-size: 24px;">
+                    <a href="mailto:info@websitepembelajaran.com" style="text-decoration: none;">📧</a>
+                    <a href="#" style="text-decoration: none;">📘</a>
+                    <a href="#" style="text-decoration: none;">📸</a>
+                    <a href="#" style="text-decoration: none;">🐦</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cascode Simple Steps</h3>
+                <p>From a blank file to a beautiful site. Master the building blocks of the web, one step at a time.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Materi</h3>
+                <a href="materi/html/bab1/1.1-pendahuluan.html">HTML</a>
+                <a href="materi/css/bab1/1.1-pengenalan.html">CSS</a>
+                <a href="materi/javascript/bab1/1.1-pengenalan.html">JavaScript</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cascode Simple Steps. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
     <script>
-        // Handle contact form submission
+        // Handle form submit
         document.getElementById('contact-form').addEventListener('submit', (e) => {
             e.preventDefault();
             
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const subject = document.getElementById('contact-subject').value;
-            const message = document.getElementById('contact-message').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
             
-            alert(`Terima kasih, ${name}! Pesan Anda telah dikirim.\n\nKami akan segera menghubungi Anda di ${email}.`);
+            alert(`Terima kasih, ${name}! Pesan Anda telah dikirim.\n\nKami akan menghubungi Anda di ${email}.`);
             
             // Reset form
             document.getElementById('contact-form').reset();
