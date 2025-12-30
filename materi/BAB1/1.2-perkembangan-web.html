@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1.2 Struktur Dasar HTML - Website Pembelajaran</title>
+    <title>1.2 Perkembangan Web dari Masa ke Masa - Cascode Simple Steps</title>
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,54 +14,34 @@
         <div class="nav-left">
             <a href="../../../index.html" class="menu-btn" id="logo-btn">
                 <div class="logo">
-                    <img src="../../../images/logo.png" alt="Logo">
+                    <img src="../../../images/logo_blue.png" alt="Logo">
                 </div>
             </a>
             
+            <!-- Dropdown Materi -->
             <div class="dropdown">
-                <button class="menu-btn">
-                    HTML <span class="arrow">▼</span>
-                </button>
+                <button class="menu-btn">☰ Materi</button>
                 <div class="menu">
                     <div class="menu-section">
-                        <h3>BAB 1</h3>
-                        <a href="1.1-pendahuluan.html">1.1 Pendahuluan</a>
-                        <a href="1.2-struktur-dasar.html" class="active">1.2 Struktur Dasar</a>
-                        <a href="1.3-tags.html">1.3 Tags HTML</a>
-                        <a href="1.4-atribut.html">1.4 Atribut</a>
-                        <a href="1.5-heading-paragraf.html">1.5 Heading & Paragraf</a>
+                        <h3>BAB 1 - Pendahuluan</h3>
+                        <ul>
+                            <li><a href="1.1-pendahuluan.html">1.1 Pentingnya Web Development</a></li>
+                            <li><a href="1.2-perkembangan-web.html" class="active">1.2 Perkembangan Web dari Masa ke Masa</a></li>
+                            <li><a href="1.3-tools.html">1.3 Tools dan Lingkungan Pengembangan</a></li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="menu-btn">
-                    CSS <span class="arrow">▼</span>
-                </button>
-                <div class="menu">
                     <div class="menu-section">
-                        <h3>BAB 1</h3>
-                        <a href="../../css/bab1/1.1-pengenalan.html">1.1 Pengenalan CSS</a>
-                        <a href="../../css/bab1/1.2-syntax.html">1.2 Syntax CSS</a>
-                        <a href="../../css/bab1/1.3-selectors.html">1.3 Selectors</a>
-                        <a href="../../css/bab1/1.4-colors.html">1.4 Colors</a>
-                        <a href="../../css/bab1/1.5-box-model.html">1.5 Box Model</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="menu-btn">
-                    JavaScript <span class="arrow">▼</span>
-                </button>
-                <div class="menu">
-                    <div class="menu-section">
-                        <h3>BAB 1</h3>
-                        <a href="../../javascript/bab1/1.1-pengenalan.html">1.1 Pengenalan JS</a>
-                        <a href="../../javascript/bab1/1.2-syntax.html">1.2 Syntax JS</a>
-                        <a href="../../javascript/bab1/1.3-variables.html">1.3 Variables</a>
-                        <a href="../../javascript/bab1/1.4-functions.html">1.4 Functions</a>
-                        <a href="../../javascript/bab1/1.5-dom.html">1.5 DOM</a>
+                        <h3>BAB 2 - HTML5</h3>
+                        <ul>
+                            <li><a href="../../BAB2/2.1-pengenalan-html.html">2.1 Pengenalan HTML5</a></li>
+                            <li><a href="../../BAB2/2.2-struktur-dasar.html">2.2 Struktur Dasar HTML5</a></li>
+                            <li><a href="../../BAB2/2.3-tags.html">2.3 Hierarki Tags HTML5</a></li>
+                            <li><a href="../../BAB2/2.4-hyperlinks.html">2.4 Hyperlinks</a></li>
+                            <li><a href="../../BAB2/2.5-tables.html">2.5 Penyajian Data</a></li>
+                            <li><a href="../../BAB2/2.6-form.html">2.6 Form dan Input</a></li>
+                            <li><a href="../../BAB2/2.7-semantic1.html">2.7 Pentingnya Semantic HTML5</a></li>
+                            <li><a href="../../BAB2/2.8-mini-project-1.html">2.8 Mini Project 1: Landing Page Statis</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -77,96 +57,33 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <div class="content-wrapper">
         <main class="content">
             <div class="breadcrumb">
                 <a href="../../../index.html">Home</a> 
                 <span>›</span>
-                <a href="../../../index.html">HTML</a>
+                <a href="../../../index.html">Materi</a>
                 <span>›</span>
-                <span>BAB 1 - 1.2 Struktur Dasar</span>
+                <span>BAB 1 - 1.2 Perkembangan Web dari Masa ke Masa</span>
             </div>
 
-            <h1>1.2 Struktur Dasar Dokumen HTML</h1>
+            <h1>1.2 Perkembangan Web dari Masa ke Masa</h1>
             
-            <p>
-                Setiap dokumen HTML memiliki struktur dasar yang sama. Berikut adalah contoh struktur 
-                dasar dokumen HTML:
-            </p>
-
-            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Judul Halaman&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Heading Pertama Saya&lt;/h1&gt;
-    &lt;p&gt;Paragraf pertama saya.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-            <h2>Komponen Utama Dokumen HTML</h2>
-            
-            <h3>1. DOCTYPE Declaration</h3>
-            <p>
-                Deklarasi <code>&lt;!DOCTYPE html&gt;</code> mendefinisikan dokumen ini sebagai HTML5.
-                Ini harus menjadi baris pertama dari setiap dokumen HTML.
-            </p>
-
-            <h3>2. Element &lt;html&gt;</h3>
-            <p>
-                Element <code>&lt;html&gt;</code> adalah element root yang membungkus seluruh konten HTML.
-                Semua element lainnya harus berada di dalam element ini.
-            </p>
-
-            <h3>3. Element &lt;head&gt;</h3>
-            <p>
-                Element <code>&lt;head&gt;</code> berisi meta informasi tentang dokumen yang tidak ditampilkan di halaman.
-                Ini termasuk:
-            </p>
+            <p>Memahami Sejarah web membantu kita menghargai kecanggihan teknologi saat ini.</p>
             <ul>
-                <li>Judul dokumen (<code>&lt;title&gt;</code>)</li>
-                <li>Link ke stylesheet CSS</li>
-                <li>Meta tags untuk SEO</li>
-                <li>Scripts</li>
+                <li><b>Web 1.0 (The Read Only):</b> berfokus pada katalog informasi digital statis. Pengguna hanya bisa membaca konten tanpa ada interaksi aktif.</li>
+                <li><b>Web 2.0 (The Participative Web):</b> menandai munculnya media sosial dan kolaborasi. Teknologi seperti AJAX memungkinkan interaksi real-time di mana pengguna bisa berkontribusi konten.</li>
+                <li><b>Web Modern (Post – 2010):</b> era HTML5 dan CSS3 yang mengedepankan pengalaman pengguna (UX). Standar ini mendukung multimedia asli tanpa plugin tambahan dan mendukung API canggih seperti geolokasi.</li>
             </ul>
 
-            <h3>4. Element &lt;body&gt;</h3>
-            <p>
-                Element <code>&lt;body&gt;</code> berisi semua konten yang terlihat di halaman web,
-                seperti teks, gambar, link, tabel, list, dll.
-            </p>
-
-            <h2>Contoh Lengkap</h2>
-            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="id"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Website Saya&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Selamat Datang di Website Saya&lt;/h1&gt;
-    &lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-            <div class="box-tip">
-                <h3><span class="icon">💡</span> Tips</h3>
-                <p>
-                    Selalu gunakan indentasi (tab atau spasi) yang konsisten untuk membuat kode HTML Anda
-                    lebih mudah dibaca dan di-maintain!
-                </p>
-            </div>
-
+            <!-- Navigation -->
             <div class="nav-page">
                 <a href="1.1-pendahuluan.html" class="btn-nav prev">
-                    <span>←</span> 1.1 Pendahuluan
+                    <span>←</span> 1.1 Pentingnya Web Development
                 </a>
-                <a href="1.3-tags.html" class="btn-nav next">
-                    1.3 Tags HTML <span>→</span>
+                <a href="1.3-tools.html" class="btn-nav next">
+                    1.3 Tools dan Lingkungan Pengembangan <span>→</span>
                 </a>
             </div>
         </main>
@@ -189,9 +106,8 @@
             
             <div class="footer-section">
                 <h3>Materi</h3>
-                <a href="1.1-pendahuluan.html">HTML</a>
-                <a href="../../css/bab1/1.1-pengenalan.html">CSS</a>
-                <a href="../../javascript/bab1/1.1-pengenalan.html">JavaScript</a>
+                <a href="1.1-pendahuluan.html">Pendahuluan</a>
+                <a href="../../BAB2/2.1-pengenalan-html.html">HTML5</a>
             </div>
         </div>
         
