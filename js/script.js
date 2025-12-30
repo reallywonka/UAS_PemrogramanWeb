@@ -57,6 +57,6 @@ document.addEventListener("click", (e) => {
 const startBtn = document.getElementById("start-btn");
 if (startBtn) {
   startBtn.addEventListener("click", () => {
-    window.location.href = "materi/html/bab1/1.1-pendahuluan.html";
+    window.location.href = "materi/BAB1/1.1-pendahuluan.html";
   });
 }

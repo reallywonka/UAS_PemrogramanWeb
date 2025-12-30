@@ -1,10 +1,11 @@
 /* ========== VARIABLES ========== */
 :root {
-  --black: #282a35;
-  --pink: #ffc0c7;
-  --yellow: #fff4a3;
-  --white: #ffffff;
-  --gray-light: #f1f1f1;
+  --black: #121737;
+  --blue: #192853;
+  --light-blue: #eaf3fa;
+  --yellow: #ffe14e;
+  --white: #eff8ff;
+  --cream: #eee8df;
   --gray: #dcdcdc;
 }
 
@@ -59,7 +60,6 @@ header {
   height: 100%;
 }
 
-/* Style dasar untuk semua tombol menu (termasuk About, Contact, dan Materi) */
 .nav-left .menu-btn {
   height: 100%;
   display: flex;
@@ -76,20 +76,24 @@ header {
   transition: background-color 0.2s ease; /* Tambahkan animasi transisi */
 }
 
-/* Efek Hover Seragam (Warna Abu-abu) */
 .nav-left .menu-btn:hover {
-  background-color: #c8c5c5;
+  background-color: var(--black);
+  color: var(--yellow);
 }
 
-/* Pengecualian: Logo tidak perlu background abu-abu saat di-hover */
 .nav-left .menu-btn:first-child:hover {
   background-color: transparent;
+  color: var(--yellow);
 }
 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 18px;
+}
+
+.nav-right:hover {
+  background-color: transparent;
 }
 
 /* Icons */
@@ -112,7 +116,7 @@ header {
 }
 
 .dark-mode:hover {
-  background-color: var(--gray-light);
+  background-color: var(--light-blue);
 }
 
 body.dark .dark-mode:hover {
@@ -126,14 +130,13 @@ body.dark .dark-mode:hover {
   height: 100%;
 }
 
-/* Update: Style spesifik ini disederhanakan agar mewarisi style .nav-left .menu-btn */
 .dropdown .menu-btn {
-  /* height & display sudah diwarisi dari atas */
+  height: 100%;
 }
 
-/* Update: Hover khusus WARNA KUNING DIHAPUS supaya ikut warna abu-abu (#c8c5c5) */
 .dropdown .menu-btn:hover {
-  background-color: #c8c5c5; /* Samakan dengan tombol lain */
+  background-color: var(--black);
+  color: var(--yellow);
 }
 
 .menu {
@@ -141,59 +144,98 @@ body.dark .dark-mode:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--black);
-  min-width: 250px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: var(--blue);
+  min-width: 280px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  border-radius: 0 0 5px 5px;
+  border-radius: 8px;
   max-height: 500px;
   overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2px;
 }
 
 .dropdown:hover .menu,
 .menu.show {
   display: block;
+  animation: slideDown 0.2s ease-out;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menu-section {
-  padding: 15px 0;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.menu-section:last-child {
+  border-bottom: none;
 }
 
 .menu-section h3 {
   color: var(--yellow);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
   padding: 0 20px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  opacity: 0.95;
+}
+
+/* Style untuk ul/li di dropdown */
+.menu-section ul {
+  list-style: none;  /* Hilangkan bullet */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-section li {
+  margin: 0;
+  padding: 0;
 }
 
 .menu a {
   color: var(--white);
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-decoration: none;
   display: block;
   font-size: 15px;
   font-weight: 500;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
+  position: relative;
+  border-left: 3px solid transparent;
 }
 
 .menu a:hover {
-  background-color: #e7e9eb;
-  color: var(--black);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--yellow);
+  padding-left: 25px;
+  border-left-color: var(--yellow);
 }
 
 .menu a.active {
   background-color: var(--yellow);
   color: var(--black);
   font-weight: 600;
+  border-left-color: var(--yellow);
 }
 
 /* Dark mode dropdown */
 body.dark .menu {
-  background-color: #3a3c4a;
-  border: 1px solid #555761;
+  background-color: #2a2c3a;
+  border: 1px solid #3a3c4a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 body.dark .menu a {
@@ -201,7 +243,8 @@ body.dark .menu a {
 }
 
 body.dark .menu a:hover {
-  background-color: #4a4c5a;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--yellow);
 }
 
 /* ========== HOMEPAGE ========== */
@@ -213,11 +256,11 @@ body.dark .menu a:hover {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--gray-light), var(--white));
+  background: var(--white);
   border-radius: 12px;
   padding: 40px;
   margin-bottom: 30px;
-  border: 1px solid var(--gray);
+  border: 0.1px solid var(--gray);
 }
 
 .hero h1 {
@@ -234,7 +277,7 @@ body.dark .menu a:hover {
 }
 
 .btn-main {
-  background-color: var(--black);
+  background-color: var(--blue);
   color: var(--white);
   padding: 15px 30px;
   font-size: 1.1em;
@@ -246,12 +289,14 @@ body.dark .menu a:hover {
 }
 
 .btn-main:hover {
-  transform: scale(1.05); /* Sedikit efek zoom saat hover */
+  transform: scale(1.05);
+  color: var(--black);
+  background-color: var(--yellow);
 }
 
 body.dark .btn-main {
   background-color: var(--yellow);
-  color: #282a35;
+  color: var(--black);
 }
 
 .container hr {
@@ -282,7 +327,7 @@ body.dark .btn-main {
 }
 
 .card:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(25, 40, 83, 0.3);
   cursor: pointer;
   transform: translateY(-3px);
 }
@@ -381,7 +426,7 @@ body.dark .card:hover {
 }
 
 .content pre {
-  background-color: var(--gray-light);
+  background-color: var(--light-blue);
   border: 1px solid var(--gray);
   border-radius: 5px;
   padding: 15px;
@@ -392,7 +437,7 @@ body.dark .card:hover {
 
 .content code {
   font-family: "Courier New", Courier, monospace;
-  background-color: var(--gray-light);
+  background-color: var(--light-blue);
   padding: 2px 6px;
   border-radius: 3px;
 }
@@ -440,7 +485,7 @@ body.dark .card:hover {
 }
 
 .btn-nav:hover {
-  background-color: var(--gray-light);
+  background-color: var(--yellow);
 }
 
 .btn-nav.prev:hover {
@@ -513,7 +558,7 @@ body.dark .card:hover {
   align-items: center;
   min-height: calc(100vh - 80px);
   padding: 40px 20px;
-  background-color: var(--gray-light);
+  background-color: var(--light-blue);
 }
 
 .form-box {
@@ -594,8 +639,8 @@ body.dark .card:hover {
 
 /* ========== FOOTER ========== */
 footer {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--blue);
+  color: var(--black);
   padding: 40px 20px 20px;
   margin-top: 60px;
 }
@@ -604,9 +649,15 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 7fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 30px;
+}
+
+.footer-section p {
+  color: var(--white);
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
 .footer-section h3 {
@@ -614,21 +665,6 @@ footer {
   margin-bottom: 15px;
   color: var(--yellow);
   font-size: 1.1em;
-}
-
-.footer-section p {
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* Alignment: Section pertama left, sisanya right */
-.footer-section:first-child {
-  text-align: left;
-}
-
-.footer-section:nth-child(2),
-.footer-section:nth-child(3) {
-  text-align: right;
 }
 
 .footer-section a {
@@ -664,6 +700,7 @@ footer {
 }
 
 .footer-bottom p {
+  color: var(--white);
   margin: 0;
 }
 
@@ -679,43 +716,169 @@ body.dark .footer-bottom {
 
 /* ========== DARK MODE ========== */
 body.dark {
-  --black: #e7e9eb;
-  --white: #282a35;
-  --gray-light: #3a3c4a;
-  --gray: #555761;
+  --black: #e8eaed;        /* Light text */
+  --white: #1e1e1e;        /* Dark background */
+  --gray-light: #2d2d30;   /* Card background */
+  --gray: #3e3e42;         /* Border */
+  --yellow: #ffd93d;       /* Accent (lebih terang) */
+  background-color: #1e1e1e;
+  color: #e8eaed;
+}
+
+/* Header dark mode */
+body.dark header {
+  background-color: #252526;
+  border-bottom-color: #3e3e42;
 }
 
 body.dark .logo img,
 body.dark .logo-big {
-  filter: invert(1);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(26%) saturate(1478%) hue-rotate(357deg) brightness(106%) contrast(104%);
+}
+
+body.dark .nav-left .menu-btn {
+  color: #e8eaed;
+  
 }
 
 body.dark .nav-left .menu-btn:hover {
-  background-color: #555761;
+  background-color: var(--yellow);
+  color: var(--white);
 }
 
+body.dark .dark-mode:hover {
+  background-color: #3e3e42;
+}
+
+/* Hero section dark mode */
+body.dark .hero {
+  background: linear-gradient(135deg, #2d2d30, #252526);
+  border-color: #3e3e42;
+}
+
+body.dark .hero h1 {
+  color: #e8eaed;
+}
+
+body.dark .hero .subtitle {
+  color: #b4b6ba;
+}
+
+/* Button dark mode */
+body.dark .btn-main {
+  background-color: #ffd93d;
+  color: #1e1e1e;
+}
+
+body.dark .btn-main:hover {
+  background-color: #ffed4e;
+}
+
+/* Cards dark mode */
+body.dark .card {
+  background-color: #2d2d30;
+  border-color: #3e3e42;
+  color: #e8eaed;
+}
+
+body.dark .card:hover {
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.2);
+  border-color: #ffd93d;
+}
+
+body.dark .card h3 {
+  color: #e8eaed;
+}
+
+body.dark .card p {
+  color: #b4b6ba;
+}
+
+/* Features dark mode */
+body.dark .feature h3 {
+  color: #e8eaed;
+  border-bottom-color: #3e3e42;
+}
+
+body.dark .feature p {
+  color: #b4b6ba;
+}
+
+/* Content pages dark mode */
+body.dark .content h1,
+body.dark .content h2,
+body.dark .content h3 {
+  color: #e8eaed;
+}
+
+body.dark .content h1 {
+  border-bottom-color: #ffd93d;
+}
+
+body.dark .content p,
+body.dark .content li {
+  color: #b4b6ba;
+}
+
+body.dark .content pre {
+  background-color: #2d2d30;
+  border-color: #3e3e42;
+  color: #e8eaed;
+}
+
+body.dark .content code {
+  background-color: #2d2d30;
+  color: #ffd93d;
+}
+
+/* Breadcrumb dark mode */
+body.dark .breadcrumb {
+  color: #b4b6ba;
+}
+
+body.dark .breadcrumb a {
+  color: #b4b6ba;
+}
+
+body.dark .breadcrumb a:hover {
+  color: #ffd93d;
+}
+
+/* Navigation buttons dark mode */
+body.dark .btn-nav {
+  background-color: #2d2d30;
+  border-color: #3e3e42;
+  color: #e8eaed;
+}
+
+body.dark .btn-nav:hover {
+  background-color: #3e3e42;
+  border-color: #ffd93d;
+}
+
+/* Info boxes dark mode */
 body.dark .box-info {
-  background-color: #2a3b50;
-  border-color: #3c5a7d;
+  background-color: #1a2332;
+  border-color: #2d4a6d;
 }
 
 body.dark .box-info h3,
 body.dark .box-info p {
-  color: #cbe1ff;
+  color: #a8c7ff;
 }
 
 body.dark .box-warning {
-  background-color: #4d3d1a;
-  border-color: #7a6020;
+  background-color: #332a1a;
+  border-color: #5c4a20;
 }
 
 body.dark .box-warning h3,
 body.dark .box-warning p {
-  color: #ffe4a0;
+  color: #ffe8b4;
 }
 
 body.dark .box-tip {
-  background-color: #1e3a2a;
+  background-color: #1a3326;
   border-color: #2d5a3f;
 }
 
@@ -724,16 +887,79 @@ body.dark .box-tip p {
   color: #a8e6c1;
 }
 
+/* Form dark mode */
+body.dark .form-container {
+  background-color: #1e1e1e;
+}
+
+body.dark .form-box {
+  background-color: #2d2d30;
+  border-color: #3e3e42;
+  color: #e8eaed;
+}
+
+body.dark .form-box h1 {
+  color: #e8eaed;
+}
+
+body.dark .subtitle {
+  color: #b4b6ba;
+}
+
+body.dark .input-group label {
+  color: #e8eaed;
+}
+
 body.dark .input-group input,
 body.dark .input-group textarea {
-  background-color: var(--gray-light);
-  color: var(--black);
-  border-color: var(--gray);
+  background-color: #1e1e1e;
+  color: #e8eaed;
+  border-color: #3e3e42;
+}
+
+body.dark .input-group input:focus,
+body.dark .input-group textarea:focus {
+  border-color: #ffd93d;
 }
 
 body.dark .btn {
-  background-color: var(--yellow);
-  color: #282a35;
+  background-color: #ffd93d;
+  color: #1e1e1e;
+}
+
+body.dark .btn:hover {
+  background-color: #ffed4e;
+}
+
+/* Footer dark mode */
+body.dark footer {
+  background-color: #252526;
+  border-top: 1px solid #3e3e42;
+}
+
+body.dark .footer-section h3 {
+  color: #ffd93d;
+}
+
+body.dark .footer-section p {
+  color: #b4b6ba;
+}
+
+body.dark .footer-section a {
+  color: #b4b6ba;
+}
+
+body.dark .footer-section a:hover {
+  color: #ffd93d;
+}
+
+body.dark .footer-bottom {
+  border-top-color: #3e3e42;
+  color: #b4b6ba;
+}
+
+body.dark .footer-bottom p {
+  color: #b4b6ba;
 }
 
 /* ========== RESPONSIVE ========== */
