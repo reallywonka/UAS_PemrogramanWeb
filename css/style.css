@@ -83,7 +83,6 @@ header {
 
 .nav-left .menu-btn:first-child:hover {
   background-color: transparent;
-  color: var(--yellow);
 }
 
 .nav-right {
@@ -245,6 +244,13 @@ body.dark .menu a {
 body.dark .menu a:hover {
   background-color: rgba(255, 255, 255, 0.08);
   color: var(--yellow);
+}
+
+body.dark .menu a.active {
+  background-color: var(--yellow);
+  color: var(--white);
+  font-weight: 600;
+  border-left-color: var(--yellow);
 }
 
 /* ========== HOMEPAGE ========== */
@@ -746,6 +752,11 @@ body.dark .nav-left .menu-btn {
 body.dark .nav-left .menu-btn:hover {
   background-color: var(--yellow);
   color: var(--white);
+}
+
+body.dark .nav-left .menu-btn:first-child:hover {
+  background-color: transparent;
+  color: var(--yellow);
 }
 
 body.dark .dark-mode:hover {
