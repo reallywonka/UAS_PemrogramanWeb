@@ -121,7 +121,29 @@
 
                 <h1>4.3 Tailwind CSS: Utitily-First Approach</h1>
                 
-                <!-- KONTEN DI SINI -->
+                <p>Tailwind CSS memberikan kontrol penuh atas desain langsung melalui atribut kelas HTML tanpa memberikan komponen jadi seperti Bootstrap.</p>
+                <ul>
+                    <li><b>Paradigma Utility-First:</b> menggunakan kelas-kelas atonomik seperti p-4 (spacing), text-xl (typography), dan flex (layout) untuk membangun desain.</li>
+                    <li><b>Kustomisasi:</b> memungkinkan pengembang mendefinisikan identitas merek secara spesifik melalui file konfigurasi.</li>
+                    <li><b>Responsive Utilities:</b> menggunakan awalan (prefix) kelas seperti md:text-center atau lg:text-right untuk mengatur tampilan di perangkat berbeda tanpa menulis Media Query manual.</li>
+                </ul>
+                <br>
+                <p>Contoh Kode Tailwind CSS: Profil Mahasiswa Kustom</p>
+<pre>
+&lt;div class="flex flex-col md:flex-row items-center bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"&gt;
+  &lt;img class="w-24 h-24 rounded-full border-4 border-indigo-100" src="logo_unpam.png" alt="Foto Profil"&gt;
+  &lt;div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left"&gt;
+
+      &lt;h4 class="text-xl font-bold text-slate-800"&gt;Egi Witra Aditya&lt;/h4&gt;
+      &lt;p class="text-indigo-600 font-medium"&gt;Teknik Informatika S-1&lt;/p&gt;
+      
+      &lt;div class="mt-3 flex gap-2 justify-center md:justify-start"&gt;
+          &lt;span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full"&gt;Semester 5&lt;/span&gt;
+          &lt;span class="px-3 py-1 bg-green-100 text-green-600 text-xs rounded-full"&gt;Status: Aktif&lt;/span&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

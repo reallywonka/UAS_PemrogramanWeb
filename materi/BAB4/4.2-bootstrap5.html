@@ -120,8 +120,48 @@
                 </div>
 
                 <h1>4.2 Bootstrap 5: Grid System, Komponen, dan Utilities</h1>
-                
-                <!-- KONTEN DI SINI -->
+
+                <p>Bootstrap 5 merupakan pemimpin pasar framework CSS yang beralih sepenuhnya ke JavaScript Vanilla tanpa ketergantungan pada jQuery.</p>
+
+                <ul>
+                    <li><b>Sistem Grid 12 Kolom:</b> dibangun dengan Flexbox yang terdiri dari containers (pembungkus konten), rows (pembungkus kolom), dan columns (pembagi baris menjadi 12 bagian).</li>
+                    <li><b>Tingkat Responsivitas:</b> menyediakan enam breakpoints bawaan, mulai dari xs (<576px) hingga xxl (≥1400px).</li>
+                    <li><b>Komponen Antarmuka:</b> menyediakan elemen siap pakai seperti Navbar responsif, Cards (wadah konten fleksibel), dan Modals (dialog pop-up).</li>
+                </ul>
+                <br>
+                <p>Contoh Kode Bootstrap 5: Dashboard Sederhana</p>
+<pre>
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row"&gt;
+    &lt;nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse shadow-sm"&gt;
+      &lt;div class="position-sticky pt-3"&gt;
+        &lt;ul class="nav flex-column"&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link active" href="#"&gt;Dashboard Admin&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#"&gt;Data Mahasiswa UNPAM&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+ 
+    &lt;main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"&gt;
+      &lt;div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"&gt;
+        &lt;h1 class="h2"&gt;Data Akademik&lt;/h1&gt;
+      &lt;/div&gt;
+            
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-6 col-xl-3 mb-4"&gt;
+          &lt;div class="card bg-primary text-white h-100 shadow"&gt;
+            &lt;div class="card-body"&gt;Jumlah Mahasiswa: 1.200&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

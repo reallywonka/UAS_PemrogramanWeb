@@ -312,6 +312,23 @@ body.dark .btn-main {
   margin: 40px 0;
 }
 
+figure {
+  margin-bottom: 20px;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+}
+
+figure figcaption {
+  font-size: 0.9em;
+  color: var(--white);
+  margin-top: 5px;
+}
+
 /* Grid */
 .grid {
   display: grid;
@@ -1094,5 +1111,70 @@ body.dark .footer-bottom p {
 
   .hero h1 {
     font-size: 1.5em;
+  }
+}
+
+
+/* ========== COMPARISON TABLE ========== */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95em;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-table thead tr {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: left;
+  font-weight: bold;
+}
+
+body.dark .comparison-table thead tr {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+.comparison-table th, 
+.comparison-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--blue);
+  border-left: 1.7px solid var(--blue);
+  border-right: 1.7px solid var(--blue);
+}
+
+body.dark .comparison-table th, 
+body.dark .comparison-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--yellow);
+  border-left: 1.7px solid var(--yellow);
+  border-right: 1.7px solid var(--yellow);
+}
+
+.comparison-table tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+body.dark .comparison-table tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.comparison-table tbody tr:last-of-type {
+  border-bottom: 1.7px solid var(--blue);
+}
+
+body.dark .comparison-table tbody tr:last-of-type {
+  border-bottom: 1.7px solid var(--yellow);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .comparison-table {
+      font-size: 0.8em;
+  }
+  .comparison-table th, .comparison-table td {
+      padding: 8px 10px;
   }
 }

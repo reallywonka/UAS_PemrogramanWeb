@@ -120,8 +120,215 @@
                 </div>
 
                 <h1>4.6 Exercises 3: Membuat Landing Page dengan framework CSS</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>Bagian ini mempraktikkan konversi nyata dari halaman statis HTML dasar (Bab II) menjadi Landing Page modern yang  responsive menggunakan Booststrap 5. Trasformasi utama difokuskan pada tiga komponen: navigasi, table, dan formulir. </p>
+
+                <ol>
+                    <li>Persiapan dan Integrasi Library</li>
+                    <p>Langkah awal adalah menghubungkan dokumen HTML dengan library Bootstrap menggunakan metode CDN (Content Delivery Network). Metode ini memungkinkan semua kelas utilitas digunakan secara instan tanpa perlu instalasi file secara lokal di komputer.</p>
+<pre>
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+</pre>
+<br>
+                    <li>Transformasi Struktur (Before vs After)</li>
+                    <p>Dilakukan perbandingan perubahan dari kode HTML murni menuju penggunaan kelas komponen Bootstrap:</p>
+                    <ol>
+                        <li>Header dan Navigasi: link teks biasa diubah menjadi komponen Navbar yang memiliki fitur sticky (tetap di atas saat di-scroll) dan tombol hamburger responsif untuk layar kecil.</li>
+<pre>
+&lt;nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow"&gt;
+    &lt;div class="container"&gt;
+        &lt;a class="navbar-brand font-weight-bold" href="#"&gt;UNPAM AI SEMINAR&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#informasi"&gt;Informasi&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#jadwal"&gt;Jadwal&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link btn btn-warning text-dark ms-lg-3" href="#daftar"&gt;Daftar Sekarang&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+<br>
+                        <li>Table Jadwal (Rundown): table yang sebelumnya kaku dimodifikasi dengan kelas .table-hover untuk interaksi kursor dan dibungkus kelas .table-responsive agar tata letak tetap rapi saat dibuka di perangkat mobile.</li>
+<pre>
+&lt;div class="table-responsive shadow-sm rounded"&gt;
+    &lt;table class="table table-striped table-hover align-middle"&gt;
+        &lt;thead class="table-dark"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Waktu&lt;/th&gt;
+                &lt;th&gt;Sesi Acara&lt;/th&gt;
+                &lt;th&gt;Pembicara&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;08:00 - 09:00&lt;/td&gt;
+                &lt;td&gt;Registrasi Mahasiswa&lt;/td&gt;
+                &lt;td&gt;Panitia&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+<br>
+                        <li>Formulir Pendaftaran: estetika input ditingkatkan menggunakan kelas .form-control dan .form-select, yang memberikan efek visual fokus modern dan validasi visual yang lebih baik.</li>
+                        <p>Hasil Implementasi:</p>
+                        <p>Proses transfomasi ini menghasilkan halaman web yang profesional melalui penggabungan berbagai komponen Bootstrap 5, seperti Hero Section dengan gradasi, Card untuk informasi fitur, dan sistem grid untuk penempatan konten.</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Studi Kasus: Landing Page Seminar AI - Kelompok 2&lt;/title&gt;
+    
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    
+    &lt;style&gt;
+        body { background-color: #f8f9fa; }
+        .hero-section { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1500x600');
+            background-size: cover; 
+            color: white; 
+            padding: 100px 0; 
+        }
+        .card { border: none; border-radius: 15px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand fw-bold" href="#"&gt;UNPAM AI SEMINAR&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#informasi"&gt;Tentang&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#jadwal"&gt;Jadwal&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link btn btn-warning text-dark px-3 ms-lg-3" href="#daftar"&gt;Daftar Sekarang&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;header class="hero-section text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;img src="logo_unpam.png" alt="Logo UNPAM" width="120" class="mb-4"&gt;
+            &lt;h1 class="display-4 fw-bold"&gt;Masa Depan Artificial Intelligence&lt;/h1&gt;
+            &lt;p class="lead"&gt;Seminar Nasional Mahasiswa Teknik Informatika Universitas Pamulang 2025&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="container my-5"&gt;
+        &lt;section id="informasi" class="mb-5"&gt;
+            &lt;h2 class="text-center mb-4"&gt;Kenapa Harus Ikut?&lt;/h2&gt;
+            &lt;div class="row g-4"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="card h-100 shadow-sm p-3 text-center"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title fw-bold"&gt;Sertifikat Nasional&lt;/h5&gt;
+                            &lt;p class="card-text text-muted"&gt;Diakui secara nasional untuk menambah portofolio Anda.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="card h-100 shadow-sm p-3 text-center"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title fw-bold"&gt;Networking&lt;/h5&gt;
+                            &lt;p class="card-text text-muted"&gt;Bertemu dengan praktisi IT dan ahli AI berpengalaman.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="card h-100 shadow-sm p-3 text-center"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title fw-bold"&gt;Materi PDF&lt;/h5&gt;
+                            &lt;p class="card-text text-muted"&gt;Dapatkan akses eksklusif seluruh materi pembicara.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="jadwal" class="mb-5 py-4"&gt;
+            &lt;h2 class="mb-4"&gt;Jadwal Kegiatan (Rundown)&lt;/h2&gt;
+            &lt;div class="table-responsive shadow rounded-3"&gt;
+                &lt;table class="table table-hover table-striped mb-0"&gt;
+                    &lt;thead class="table-primary text-white"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Waktu&lt;/th&gt;
+                            &lt;th&gt;Sesi Acara&lt;/th&gt;
+                            &lt;th&gt;Pembicara&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;08:00 - 09:00&lt;/td&gt;
+                            &lt;td&gt;Registrasi & Coffee Break&lt;/td&gt;
+                            &lt;td&gt;Panitia&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;09:00 - 11:30&lt;/td&gt;
+                            &lt;td&gt;Workshop Machine Learning&lt;/td&gt;
+                            &lt;td&gt;Ahli AI Indonesia&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;12:00 - 13:00&lt;/td&gt;
+                            &lt;td&gt;Istirahat & Makan Siang&lt;/td&gt;
+                            &lt;td&gt;-&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="daftar" class="row justify-content-center"&gt;
+            &lt;div class="col-lg-8"&gt;
+                &lt;div class="card shadow p-4 p-md-5"&gt;
+                    &lt;h2 class="text-center mb-4"&gt;Formulir Pendaftaran&lt;/h2&gt;
+                    &lt;form action="#" method="POST"&gt;
+                        &lt;div class="mb-3"&gt;
+                            &lt;label class="form-label"&gt;Nama Lengkap&lt;/label&gt;
+                            &lt;input type="text" class="form-control" placeholder="Egi Witra Aditya" required&gt;
+                        &lt;/div&gt;
+                        &lt;div class="row mb-3"&gt;
+                            &lt;div class="col-md-6"&gt;
+                                &lt;label class="form-label"&gt;Email Kampus&lt;/label&gt;
+                                &lt;input type="email" class="form-control" placeholder="name@unpam.ac.id" required&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-md-6"&gt;
+                                &lt;label class="form-label"&gt;Program Studi&lt;/label&gt;
+                                &lt;select class="form-select"&gt;
+                                    &lt;option value="TI"&gt;Teknik Informatika&lt;/option&gt;
+                                    &lt;option value="SI"&gt;Sistem Informasi&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-4 text-center"&gt;
+                            &lt;button type="submit" class="btn btn-primary btn-lg px-5"&gt;Kirim Pendaftaran&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer class="bg-dark text-white text-center py-4 mt-5"&gt;
+        &lt;p class="mb-0"&gt;&copy; 2025 Kelompok 2 - Teknik Informatika UNPAM. All Rights Reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    </ol>
+                </ol>
 
                 <!-- Navigation -->
                 <div class="nav-page">
