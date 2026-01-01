@@ -120,8 +120,71 @@
                 </div>
 
                 <h1>3.7 Estetika Visual: Shadow, Gradient, Transition, Animation</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    CSS3 memindahkan beban kerja visual dari gambar statis ke render mesin browser, yang membuat website lebih ringan, cepat, dan interaktif.
+                </p>
+                <h3>1. Shadow (Bayangan)</h3>
+                <p>
+                    Fitur <code>box-shadow</code> dan <code>text-shadow</code> memberikan kesan kedalaman atau efek mengambang (3D) pada elemen.
+                </p>
+                <p><strong>Sintaks Dasar:</strong></p>
+                <pre><code>box-shadow: [h-offset] [v-offset] [blur] [spread] [color];</code></pre>
+                <ul class="content-list">
+                    <li><strong>h-offset:</strong> Posisi bayangan horizontal (kanan/kiri).</li>
+                    <li><strong>v-offset:</strong> Posisi bayangan vertikal (bawah/atas).</li>
+                    <li><strong>blur:</strong> Tingkat keburaman bayangan.</li>
+                </ul>
+
+                <h3>2. Gradients (Gradasi Warna)</h3>
+                <p>Menciptakan peralihan warna yang halus sebagai latar belakang tanpa perlu file gambar.</p>
+                <ul class="content-list">
+                    <li><strong>Linear Gradient:</strong> Perubahan warna dalam garis lurus (atas ke bawah, atau diagonal).</li>
+                    <li><strong>Radial Gradient:</strong> Perubahan warna yang memancar dari pusat lingkaran ke luar.</li>
+                </ul>
+
+                <h3>3. Animasi dan Transisi</h3>
+                <p>
+                    Mengubah property CSS secara halus dalam durasi tertentu. Misalkan tombol yang membesar sedikit atau berubah warna secara perlahan saat disentuh kursor (hover).
+                </p>
+                <br>
+                <hr>
+                <br>
+                <h3>Contoh Kode: Animasi Button Modern</h3>
+                <p>Berikut adalah kode untuk membuat tombol dengan gradasi warna dan efek animasi saat di-hover:</p>
+
+<pre>
+/* Style Tombol Modern */
+.demo-btn {
+    padding: 15px 30px;
+    background: var(--blue);
+    border: none;
+    color: var(--light-blue);
+    border-radius: 50px; /* Membuat sudut membulat */
+
+    /* TRANSISI HALUS */
+    /* Mengubah semua properti dalam 0.3 detik */
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Efek saat Kursor di atas Tombol (Hover) */
+.demo-btn:hover {
+    transform: translateY(-5px); /* Tombol naik ke atas 5 pixel */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Muncul bayangan di bawah */
+    color: var(--blue);
+    background-color: var(--yellow);
+}
+</pre>
+
+                <div style="margin-bottom: 20px;">
+                    <p><strong>Hasil Preview:</strong></p>
+                    <button class="demo-btn">Hover Saya!</button>
+                </div>
 
                 <!-- Navigation -->
                 <div class="nav-page">

@@ -120,8 +120,92 @@
                 </div>
 
                 <h1>3.5 Tata Letak Dua Dimensi dengan Grid</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    <strong>CSS Grid Layout</strong> adalah sistem tata letak paling kuat yang tersedia di CSS saat ini. 
+                    Berbeda dengan Flexbox yang berfokus pada satu dimensi (baris saja atau kolom saja), CSS Grid memungkinkan pengembang mengatur elemen dalam dua dimensi secara bersamaan (baris dan kolom).
+                </p>
+                <h3>Properti Utama Grid Container:</h3>
+                <div style="overflow-x:auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Properti</th>
+                                <th>Deskripsi Teknis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="inline">grid-template-columns</code></td>
+                                <td>Menentukan jumlah dan lebar kolom.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="inline">grid-template-rows</code></td>
+                                <td>Menentukan jumlah dan tinggi baris.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="inline">gap</code></td>
+                                <td>Mengatur jarak antar sel (dulu disebut <code>grid-gap</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><code class="inline">grid-template-areas</code></td>
+                                <td>Menentukan tata letak berdasarkan nama area yang telah ditentukan.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <h3>Analisis Kode Implementasi Layout Kompleks</h3>
+                <p>
+                    Berikut adalah contoh pembuatan struktur halaman lengkap (Header, Sidebar, Main, Footer) menggunakan <code class="inline">grid-template-areas</code>. Cara ini sangat mudah dibaca dan dipahami:
+                </p>
+
+<pre>
+/* DEFINISI CONTAINER GRID */
+.container {
+    display: grid;
+    
+    /* 250px untuk Sidebar, sisanya (1fr) untuk Main Content */
+    grid-template-columns: 250px 1fr; 
+    
+    /* Tinggi baris: Header (auto), Konten (1fr/sisa ruang), Footer (auto) */
+    grid-template-rows: auto 1fr auto; 
+    
+    /* Peta Tata Letak (Visualisasi Grid) */
+    grid-template-areas: 
+        "header header"   /* Baris 1: Header memenuhi 2 kolom */
+        "sidebar main"    /* Baris 2: Sidebar di kiri, Main di kanan */
+        "footer footer";  /* Baris 3: Footer memenuhi 2 kolom */
+        
+    height: 100vh; /* Tinggi container memenuhi layar */
+    gap: 15px;     /* Jarak antar elemen */
+}
+
+/* MENUGASKAN ELEMEN KE AREA */
+header { 
+    grid-area: header; 
+    background: #34495e; 
+    color: white; 
+}
+
+nav { 
+    grid-area: sidebar; 
+    background: #ecf0f1; 
+}
+
+main { 
+    grid-area: main; 
+    background: #fff; 
+}
+
+footer { 
+    grid-area: footer; 
+    background: #2c3e50; 
+    color: white; 
+}
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

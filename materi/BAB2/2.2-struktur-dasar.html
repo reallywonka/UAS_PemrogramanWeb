@@ -120,8 +120,83 @@
                 </div>
 
                 <h1>2.2 Struktur Dasar HTML5</h1>
+                <p>
+                    Setiap halaman web yang valid harus mengikuti kerangka standar yang ditetapkan oleh
+                    W3C agar browser dapat menampilkan konten dengan sempurna. Berikut adalah komponen-komponen utamanya:
+                </p>
+
+                <h3>1. Deklarasi DOCTYPE</h3>
+                <p>
+                    Ini adalah baris pertama yang wajib ada sebagai instruksi kepada browser mengenai versi bahasa
+                    markup agar browser tidak masuk ke "Quirks Mode" (mode kompatibilitas lama).
+                </p>
+<pre>
+&lt;!DOCTYPE html&gt;
+</pre>
+
+                <h3>2. Element Root (HTML)</h3>
+                <p>
+                    Tag <code class="inline">&lt;html&gt;</code> adalah pembungkus seluruh kode HTML. 
+                    Sangat disarankan menambahkan atribut <code class="inline">lang="id"</code> untuk membantu mesin pencari 
+                    dan aplikasi pembaca layar melafalkan teks dengan benar (bahasa Indonesia).
+                </p>
+<pre>
+&lt;html lang="id"&gt;
+...
+&lt;/html&gt;
+</pre>
+
+                <h3>3. Bagian Kepala (Head)</h3>
+                <p>
+                    Tag <code class="inline">&lt;head&gt;</code> adalah wadah untuk metadata atau data tentang halaman. 
+                    Isinya tidak tampil secara visual di halaman web, namun sangat vital untuk pengaturan teknis.
+                </p>
+<pre>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Struktur Dasar HTML5 - Kelompok 2&lt;/title&gt;
+&lt;/head&gt;
+</pre>
+            
+                <p><strong>Penjelasan elemen di dalam Head:</strong></p>
+                <ul>
+                    <li><code class="inline">&lt;meta charset="UTF-8"&gt;</code> : Memastikan simbol karakter dunia (huruf arab, kanji, dll) dan emoji tampil benar.</li>
+                    <li><code class="inline">&lt;meta name="viewport" ...&gt;</code> : Kunci dari Responsive Web Design agar tampilan di HP tidak terlihat sangat kecil (zoom out).</li>
+                    <li><code class="inline">&lt;title&gt;</code> : Judul yang muncul di tab browser dan hasil pencarian Google.</li>
+                </ul>
+
+                <h3>4. Bagian Tubuh (Body)</h3>
+                <p>
+                    Tag <code class="inline">&lt;body&gt;</code> adalah tempat di mana seluruh konten visual (teks, gambar, tombol, video, dll) diletakkan.
+                    Apapun yang Anda tulis di sini akan dilihat oleh pengunjung website.
+                </p>
+<pre>
+&lt;body&gt;
+    &lt;h1&gt;Selamat Datang di Website Kami&lt;/h1&gt;
+    &lt;p&gt;Ini adalah contoh halaman dengan struktur HTML5 yang valid.&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+                <br>
+                <hr>
+                <br>
+                <h3>Praktik: Implementasi Kode Struktur Dasar Lengkap</h3>
+                <p>Berikut adalah contoh penggabungan seluruh elemen di atas menjadi satu file HTML yang utuh:</p>
                 
-                <!-- KONTEN DI SINI -->
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Struktur Dasar HTML5 - Kelompok 2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Selamat Datang di Website Kami&lt;/h1&gt;
+    &lt;p&gt;Ini adalah contoh halaman dengan struktur HTML5 yang valid.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

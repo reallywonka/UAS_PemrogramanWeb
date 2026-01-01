@@ -120,8 +120,34 @@
                 </div>
 
                 <h1>3.1 Pengenalan CSS</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    <strong>CSS3 (Cascading Style Sheets versi 3)</strong> adalah bahasa standar yang digunakan untuk mengontrol seluruh presentasi visual website, mulai dari warna, jenis huruf, hingga tata letak. 
+                    Berbeda dengan versi sebelumnya, CSS3 dikembangkan dalam bentuk modul-modul terpisah oleh W3C untuk meningkatkan efisiensi dan fitur.
+                </p>
+                <h3>Peran Utama CSS3:</h3>
+                <ul class="content-list">
+                    <li>
+                        <strong>Pemisahan Konten dan Presentasi:</strong> 
+                        Menjaga agar struktur HTML tetap bersih sementara desain dikelola secara terpusat di file CSS eksternal.
+                    </li>
+                    <li>
+                        <strong>Interaktivitas Tanpa Script:</strong> 
+                        Mendukung animasi dan transisi halus yang sebelumnya hanya bisa dilakukan dengan JavaScript.
+                    </li>
+                    <li>
+                        <strong>Efisiensi Browser:</strong> 
+                        Mendukung fitur caching sehingga mempercepat pemuatan halaman bagi pengguna (karena file CSS hanya perlu didownload sekali).
+                    </li>
+                </ul>
+
+                <h3>Cara Kerja CSS (Rendering Path):</h3>
+                <p>Mahasiswa perlu memahami bahwa browser memproses CSS melalui beberapa tahap sebelum tampilan muncul di layar:</p>
+                <ol class="content-list">
+                    <li><strong>Membangun CSSOM:</strong> Browser membaca CSS dan membuat <em>CSS Object Model</em>.</li>
+                    <li><strong>Menggabungkan dengan DOM:</strong> CSSOM digabungkan dengan HTML (DOM) menjadi <em>Render Tree</em>.</li>
+                    <li><strong>Layout:</strong> Browser menghitung posisi piksel dan ukuran setiap elemen.</li>
+                    <li><strong>Paint:</strong> Langkah terakhir melakukan pewarnaan dan menampilkan elemen visual ke layar.</li>
+                </ol>
 
                 <!-- Navigation -->
                 <div class="nav-page">

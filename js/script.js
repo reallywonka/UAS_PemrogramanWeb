@@ -60,3 +60,46 @@ if (startBtn) {
     window.location.href = "materi/BAB1/1.1-pendahuluan.html";
   });
 }
+
+
+// COPY CODE BUTTON
+const codeBlocks = document.querySelectorAll('pre');
+
+codeBlocks.forEach((pre) => {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'code-wrapper';
+
+  pre.parentNode.insertBefore(wrapper, pre);
+
+  wrapper.appendChild(pre);
+
+  const button = document.createElement('button');
+  button.className = 'copy-btn';
+  button.innerHTML = '📋 Copy';
+
+  button.addEventListener('click', () => {
+    const code = pre.innerText;
+    
+    navigator.clipboard.writeText(code).then(() => {
+      button.innerHTML = 'Copied!';
+      setTimeout(() => {
+        button.innerHTML = '📋 Copy';
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+      const textArea = document.createElement("textarea");
+      textArea.value = code;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      
+      button.innerHTML = 'Copied!';
+      setTimeout(() => {
+        button.innerHTML = '📋 Copy';
+      }, 2000);
+    });
+  });
+
+  wrapper.appendChild(button);
+});

@@ -120,8 +120,189 @@
                 </div>
 
                 <h1>2.8 Exercises 1: Membangun Landing Page Statis</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    Setelah mempelajari berbagai elemen HTML5 secara terpisah (Teks, List, Link, Gambar, Tabel, Form, dan Multimedia), 
+                    langkah terakhir dalam bab ini adalah mengintegrasikan seluruh komponen tersebut menjadi satu halaman web yang utuh dan fungsional.
+                </p>
+                <p>
+                    Pada praktik ini, kita akan membangun sebuah <strong>Landing Page Seminar Nasional</strong>. 
+                    Proyek ini mencakup kebutuhan administrasi yang lengkap dan menerapkan standar Semantic Structure (Header, Nav, Main, Aside, Footer).
+                </p>
+                <br>
+                <hr>
+                <br>
+                <h3>a. Persiapan File</h3>
+                <p>Sebelum memulai pengkodean, pastikan file-file aset berikut telah tersedia di dalam folder kerja (Projek_Makalah_UTS):</p>
+                <ul class="content-list">
+                    <li><code>logo_unpam.png</code> (Logo Universitas)</li>
+                    <li><code>Mars_unpam.mp3</code> (File Audio)</li>
+                    <li><code>vidio_unpam.mp4</code> (File Video)</li>
+                </ul>
+                <h3>b. Langkah-langkah Praktik</h3>
+                <ol class="content-list">
+                    <li>Buka Visual Studio Code.</li>
+                    <li>Buat file baru bernama <code class="inline">proyek_akhir_bab2.html</code>.</li>
+                    <li>Salin kode program berikut secara lengkap ke dalam file tersebut.</li>
+                </ol>
+                <br>
+                <hr>
+                <br>
+                <h3>Kode Program Lengkap:</h3>
+                <p>Salin kode di bawah ini dan simpan sebagai file HTML baru:</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Seminar Nasional AI 2025&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- HEADER: Judul dan Menu Navigasi --&gt;
+        &lt;header&gt;
+            &lt;img src="logo_unpam.png" alt="Banner Seminar AI" width="10%"&gt;
+            &lt;h1&gt;SEMINAR NASIONAL: MASA DEPAN ARTIFICIAL INTELLIGENCE&lt;/h1&gt;
+            &lt;p&gt;
+                &lt;!-- Anchor Link ke Bagian Bawah Halaman --&gt;
+                &lt;a href="#informasi"&gt;Informasi&lt;/a&gt; | 
+                &lt;a href="#jadwal"&gt;Jadwal Acara&lt;/a&gt; | 
+                &lt;a href="#daftar"&gt;Daftar Sekarang&lt;/a&gt; |
+                &lt;a href="#teaser"&gt;Video Teaser&lt;/a&gt;
+            &lt;/p&gt;
+            &lt;hr&gt;
+        &lt;/header&gt;
+    
+        &lt;!-- MAIN CONTENT --&gt;
+        &lt;main&gt;
+            &lt;!-- Section 1: Informasi Acara --&gt;
+            &lt;section id="informasi"&gt;
+                &lt;h2&gt;Tentang Acara&lt;/h2&gt;
+                &lt;p&gt;Seminar ini akan membahas perkembangan teknologi AI terbaru, 
+                mulai dari ChatGPT hingga Computer Vision. Peserta akan mendapatkan:&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Sertifikat Nasional&lt;/li&gt;
+                    &lt;li&gt;Materi Seminar (PDF)&lt;/li&gt;
+                    &lt;li&gt;Snack & Makan Siang&lt;/li&gt;
+                    &lt;li&gt;Networking dengan praktisi IT&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/section&gt;
+    
+            &lt;hr&gt;
+    
+            &lt;!-- Section 2: Jadwal (Tabel) --&gt;
+            &lt;section id="jadwal"&gt;
+                &lt;h2&gt;Jadwal Kegiatan (Rundown)&lt;/h2&gt;
+                &lt;table border="1" cellpadding="8" cellspacing="0" width="100%"&gt;
+                    &lt;thead&gt;
+                    &lt;tr bgcolor="#dddddd"&gt;
+                        &lt;th&gt;Waktu&lt;/th&gt;
+                        &lt;th&gt;Kegiatan&lt;/th&gt;
+                        &lt;th&gt;Pembicara/PJ&lt;/th&gt;
+                        &lt;th&gt;Lokasi&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;08.00 - 09.00&lt;/td&gt;
+                        &lt;td&gt;Registrasi Ulang&lt;/td&gt;
+                        &lt;td&gt;Panitia&lt;/td&gt;
+                        &lt;td rowspan="4" align="center"&gt;Auditorium&lt;br&gt;Universitas Pamulang&lt;br&gt;(Viktor)&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;09.00 - 10.30&lt;/td&gt;
+                        &lt;td&gt;Sesi 1: Dasar Machine Learning&lt;/td&gt;
+                        &lt;td&gt;Dr. Budi Santoso, M.Kom&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;10.30 - 12.00&lt;/td&gt;
+                        &lt;td&gt;Sesi 2: Pemanfaatan AI untuk Bisnis&lt;/td&gt;
+                        &lt;td&gt;Arya Pranata, S.Kom., M.Kom&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;12.00 - 13.00&lt;/td&gt;
+                        &lt;td colspan="2" align="center"&gt;&lt;strong&gt;ISHOMA (Istirahat Sholat Makan)&lt;/strong&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/section&gt;
+    
+            &lt;hr&gt;
+    
+            &lt;!-- Section 3: Form Pendaftaran --&gt;
+            &lt;section id="daftar"&gt;
+                &lt;h2&gt;Formulir Pendaftaran Peserta&lt;/h2&gt;
+                &lt;p&gt;Silakan isi data diri Anda untuk mengikuti seminar ini:&lt;/p&gt;
+    
+                &lt;form action="proses_daftar.php" method="POST"&gt;
+                    
+                    &lt;label for="nama"&gt;Nama Lengkap:&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required size="40"&gt;&lt;br&gt;&lt;br&gt;
+    
+                    &lt;label for="email"&gt;Email Mahasiswa:&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="email" id="email" name="email" required size="40"&gt;&lt;br&gt;&lt;br&gt;
+    
+                    &lt;label&gt;Status Peserta:&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="radio" id="mhs" name="status" value="Mahasiswa" checked&gt;
+                    &lt;label for="mhs"&gt;Mahasiswa Unpam&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="radio" id="umum" name="status" value="Umum"&gt;
+                    &lt;label for="umum"&gt;Umum&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+    
+                    &lt;label for="semester"&gt;Semester Saat Ini:&lt;/label&gt;&lt;br&gt;
+                    &lt;select id="semester" name="semester"&gt;
+                    &lt;option value="1"&gt;Semester 1&lt;/option&gt;
+                    &lt;option value="3"&gt;Semester 3&lt;/option&gt;
+                    &lt;option value="5" selected&gt;Semester 5&lt;/option&gt;
+                    &lt;option value="7"&gt;Semester 7&lt;/option&gt;
+                    &lt;option value="Lulus"&gt;Alumni&lt;/option&gt;
+                    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+    
+                    &lt;label&gt;Minat Topik (Boleh pilih lebih dari satu):&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="checkbox" name="minat" value="Web"&gt; Web Development&lt;br&gt;
+                    &lt;input type="checkbox" name="minat" value="AI"&gt; Artificial Intelligence&lt;br&gt;
+                    &lt;input type="checkbox" name="minat" value="Network"&gt; Jaringan Komputer&lt;br&gt;&lt;br&gt;
+    
+                    &lt;label&gt;Upload Bukti Pembayaran (Gambar):&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="file" name="bukti_bayar"&gt;&lt;br&gt;&lt;br&gt;
+    
+                    &lt;button type="submit"&gt;Daftar Seminar&lt;/button&gt;
+                    &lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/section&gt;
+        &lt;/main&gt;
+    
+        &lt;hr&gt;
+        
+        &lt;!-- ASIDE: Sidebar / Konten Tambahan --&gt;
+        &lt;aside id="teaser"&gt;
+            &lt;h3&gt;Galeri & Dokumentasi&lt;/h3&gt;
+            
+            &lt;p&gt;&lt;strong&gt;Teaser Acara (Video):&lt;/strong&gt;&lt;/p&gt;
+            &lt;video width="400" controls&gt;
+                &lt;source src="vidio_unpam.mp4" type="video/mp4"&gt;
+                Browser Anda tidak mendukung video tag.
+            &lt;/video&gt;
+            &lt;br&gt;&lt;br&gt;
+            &lt;p&gt;&lt;strong&gt;Jingle Acara (Audio):&lt;/strong&gt;&lt;/p&gt;
+            &lt;audio controls&gt;
+                &lt;source src="mars_unpam.mp3" type="audio/mpeg"&gt;
+            &lt;/audio&gt;
+        &lt;/aside&gt;
+    
+        &lt;hr&gt;
+    
+        &lt;!-- FOOTER --&gt;
+        &lt;footer&gt;
+            &lt;center&gt;
+                &lt;p&gt;&copy; 2025 Panitia Seminar IT - Universitas Pamulang.&lt;/p&gt;
+                &lt;p&gt;
+                    &lt;small&gt;Web ini dibuat menggunakan HTML5 Murni.&lt;/small&gt;
+                &lt;/p&gt;
+            &lt;/center&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

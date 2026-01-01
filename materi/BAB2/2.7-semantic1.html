@@ -120,8 +120,82 @@
                 </div>
 
                 <h1>2.7 Pentingnya Semantic HTML5</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    <strong>Semantic</strong> berarti ilmu tentang makna. Menggunakan elemen semantik (bukan sekadar <code class="inline">&lt;div&gt;</code>) memberikan keuntungan besar:
+                </p>
+                <ul>
+                    <li>
+                        <strong>SEO (Search Engine Optimization):</strong> Google memprioritaskan konten di dalam tag semantik (seperti <code class="inline">&lt;article&gt;</code>) sebagai informasi utama.
+                    </li>
+                    <li>
+                        <strong>Aksesibilitas:</strong> Membantu pengguna tunanetra melalui <em>Screen Reader</em> untuk menavigasi struktur halaman dengan cepat.
+                    </li>
+                    <li>
+                        <strong>Elemen Utama:</strong> Termasuk <code class="inline">&lt;header&gt;</code>, <code class="inline">&lt;nav&gt;</code> (menu utama), <code class="inline">&lt;main&gt;</code> (konten unik), <code class="inline">&lt;section&gt;</code> (tema tertentu), <code class="inline">&lt;article&gt;</code> (konten mandiri), <code class="inline">&lt;aside&gt;</code> (sidebar), dan <code class="inline">&lt;footer&gt;</code>.
+                    </li>
+                </ul>
+
+                <br>
+                <h3>Implementasi Kode Lengkap:</h3>
+                <p>Berikut adalah contoh struktur website portal berita mahasiswa menggunakan elemen semantik:</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Portal Berita Mahasiswa&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- HEADER: Bagian kepala website (Logo/Judul) --&gt;
+        &lt;header&gt;
+            &lt;h1&gt;PORTAL TUGAS KELOMPOK 2&lt;/h1&gt;
+            &lt;p&gt;Daftar Seluruh Latihan Pemograman Web 1&lt;/p&gt;
+        &lt;/header&gt;
+    
+        &lt;!-- NAV: Navigasi Menu Utama --&gt;
+        &lt;nav&gt;
+            &lt;a href="latihan_struktur.html"&gt;1. Struktur&lt;/a&gt; |
+            &lt;a href="latihan_teks.html"&gt;2. Teks&lt;/a&gt; |
+            &lt;a href="latihan_konten.html"&gt;3. Link & Gambar&lt;/a&gt; |
+            &lt;a href="latihan_media.html"&gt;4. Tabel & Media&lt;/a&gt; |
+            &lt;a href="latihan_form.html"&gt;5. Formulir&lt;/a&gt;
+        &lt;/nav&gt;
+    
+        &lt;div class="container"&gt;
+            &lt;!-- MAIN: Konten Utama Halaman --&gt;
+            &lt;main&gt;
+                &lt;!-- ARTICLE: Konten mandiri (Artikel berita/blog) --&gt;
+                &lt;article&gt;
+                    &lt;h2&gt;Selamat Datang di Halaman Utama&lt;/h2&gt;
+                    &lt;p&gt;Halaman ini menggunakan konsep &lt;strong&gt;Semantic HTML&lt;/strong&gt;. 
+                    Kamu bisa mencoba klik menu di atas untuk membuka hasil latihan-latihan 
+                    sebelumnya tanpa harus membuka folder secara manual.&lt;/p&gt;
+                    
+                    &lt;p&gt;Fitur ini menggunakan &lt;strong&gt;Relative URL&lt;/strong&gt;, 
+                    yaitu teknik memanggil file yang berada di dalam folder yang sama.&lt;/p&gt;
+                &lt;/article&gt;
+            &lt;/main&gt;
+    
+            &lt;!-- ASIDE: Konten Samping / Sidebar (Info tambahan) --&gt;
+            &lt;aside&gt;
+                &lt;h3&gt;Status File&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;latihan_struktur.html &lt;span style="color:green"&gt;&#10004;&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;latihan_teks.html &lt;span style="color:green"&gt;&#10004;&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;latihan_media.html &lt;span style="color:green"&gt;&#10004;&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;latihan_form.html &lt;span style="color:green"&gt;&#10004;&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/aside&gt;
+        &lt;/div&gt;
+    
+        &lt;!-- FOOTER: Bagian Kaki Website (Copyright) --&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&copy; 2025 Kelompok 2 - Universitas Pamulang&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

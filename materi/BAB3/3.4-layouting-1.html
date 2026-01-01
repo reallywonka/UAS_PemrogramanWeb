@@ -120,8 +120,73 @@
                 </div>
 
                 <h1>3.4 Tata Letak Satu Dimensi dengan Flexbox</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    <strong>Flexbox (Flexible Box Layout)</strong> dirancang untuk tata letak satu dimensi. Fokus utamanya
+                    adalah bagaimana item diatur dalam satu baris (<em>row</em>) atau satu kolom (<em>column</em>).
+                </p>
+                <h3>Fitur Utama Flexbox:</h3>
+                <ul class="content-list">
+                    <li>
+                        <strong>flex-direction:</strong> Mengatur arah item (row, column, row-reverse, column-reverse).
+                    </li>
+                    <li>
+                        <strong>justify-content:</strong> Mengatur perataan item secara horizontal (sumbu utama/main axis). Contoh: <code>center</code>, <code>space-between</code>.
+                    </li>
+                    <li>
+                        <strong>align-items:</strong> Mengatur perataan item secara vertikal (sumbu silang/cross axis). Contoh: <code>center</code>, <code>flex-start</code>.
+                    </li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>Implementasi Kode Flexbox (Navbar Responsif):</h3>
+                <p>Berikut adalah contoh kode CSS dan HTML untuk membuat navigasi bar modern:</p>
+
+<pre>
+&lt;style&gt;
+    .navbar {
+        display: flex; /* Mengaktifkan Flexbox */
+        
+        /* space-between: Mendorong elemen pertama ke kiri mentok 
+           dan elemen terakhir ke kanan mentok */
+        justify-content: space-between; 
+        
+        align-items: center; /* Teks di tengah secara vertikal */
+        background-color: #333;
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        display: flex; /* Membuat list menu berjejer ke samping */
+        list-style: none; /* Menghilangkan titik bullet */
+        gap: 20px; /* Memberi jarak antar link menu */
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a { 
+        color: white; 
+        text-decoration: none; 
+        font-weight: bold;
+    }
+    
+    .logo {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+&lt;/style&gt;
+ 
+&lt;!-- STRUKTUR HTML --&gt;
+&lt;nav class="navbar"&gt;
+    &lt;div class="logo"&gt;UNPAM TECH&lt;/div&gt;
+    &lt;ul class="nav-links"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Materi&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

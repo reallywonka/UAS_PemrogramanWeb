@@ -119,9 +119,229 @@
                     <span>BAB 3 - 3.9 Exercises 2: Membuat Layout Responsif Sederhana</span>
                 </div>
 
-                <h1>3.9 Exercises 2: Membuat Layout Responsif Sederhana</h1>
+                <h1>3.9 Exercises 2: Membuat Layout Responsif Sederhana</h1>            
+                <p>
+                    Studi kasus ini merupakan integrasi dari seluruh pilar CSS3 yang telah dipelajari sebelumnya. 
+                    Tujuannya adalah membangun kerangka website portal berita atau profil instansi dengan karakteristik modern 
+                    menggunakan <strong>CSS Grid</strong> untuk struktur utama, <strong>Flexbox</strong> untuk komponen navigasi, 
+                    dan <strong>Media Query</strong> untuk adaptasi perangkat.
+                </p>
+
+                <h3>Perencanaan Struktur (Wireframing)</h3>
+                <p>Tahap awal sebelum pengkodean adalah merencanakan area layout yang terdiri dari lima bagian utama:</p>
                 
-                <!-- KONTEN DI SINI -->
+                <ul class="content-list">
+                    <li><strong>Header:</strong> berisi judul situs.</li>
+                    <li><strong>Navigation:</strong> berisi link menu utama.</li>
+                    <li><strong>Main Content:</strong> area berita atau konten utama.</li>
+                    <li><strong>Sidebar:</strong> berisi informasi tambahan atau iklan.</li>
+                    <li><strong>Footer:</strong> berisi informasi hak cipta.</li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>Implementasi Kode Sumber (HTML & CSS)</h3>
+                <p>
+                    Implementasi ini menggabungkan elemen semantic HTML5 dengan teknik tata letak modern.
+                </p>
+
+                <h4>1. Struktur HTML (index.html)</h4>
+                <p>Menggunakan elemen semantik di dalam sebuah pembungkus besar bertipe <code>grid-container</code>.</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Studi Kasus CSS3 - Kelompok 2&lt;/title&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="grid-container"&gt;
+            &lt;header class="main-header"&gt;
+                &lt;h1&gt;PORTAL TEKNIK INFORMATIKA UNPAM&lt;/h1&gt;
+            &lt;/header&gt;
+    
+            &lt;nav class="main-nav"&gt;
+                &lt;ul class="nav-links"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Beranda&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Kurikulum&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Mahasiswa&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+    
+            &lt;main class="content-area"&gt;
+                &lt;article class="card"&gt;
+                    &lt;h2&gt;Pentingnya Penguasaan CSS3&lt;/h2&gt;
+                    &lt;p&gt;CSS3 bukan sekadar pemberi warna, melainkan arsitek visual dari sebuah aplikasi web...&lt;/p&gt;
+                    &lt;button class="btn-modern"&gt;Baca Selengkapnya&lt;/button&gt;
+                &lt;/article&gt;
+            &lt;/main&gt;
+    
+            &lt;aside class="sidebar-area"&gt;
+                &lt;h3&gt;Agenda Terdekat&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;UTS Pemrograman Web 1&lt;/li&gt;
+                    &lt;li&gt;Workshop Tailwind CSS&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/aside&gt;
+    
+            &lt;footer class="main-footer"&gt;
+                &lt;p&gt;&copy; 2025 Kelompok 2 - Teknik Informatika S1&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+                <h4>2. Pengaturan Gaya CSS (style.css)</h4>
+                <p>Kode ini akan menerapkan teknik <code>Grid-Area</code> untuk kemudahan pengaturan responsif.</p>
+
+<pre>
+/* Reset Dasar & Box Model (Sub-bab 3.2) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Struktur Grid Utama (Sub-bab 3.5) */
+.grid-container {
+    display: grid;
+    gap: 10px;
+    
+    /* Layout Mobile: 1 Kolom ke bawah */
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "sidebar"
+        "footer";
+}
+
+/* Styling Komponen Header */
+.main-header {
+    grid-area: header;
+    background-color: #0044cc;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Navigasi Menggunakan Flexbox (Sub-bab 3.4) */
+.main-nav {
+    grid-area: nav;
+    background-color: #333;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.3s; /* Sub-bab 3.7 */
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+/* Styling Main Content & Card */
+.content-area {
+    grid-area: main;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sub-bab 3.7 */
+}
+
+/* Tombol dengan Gradasi & Animasi (Sub-bab 3.7) */
+.btn-modern {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0044cc, #0088ff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-modern:hover {
+    transform: translateY(-3px);
+}
+
+/* Sidebar & Footer */
+.sidebar-area {
+    grid-area: sidebar;
+    background: #e2e2e2;
+    padding: 20px;
+}
+
+.main-footer {
+    grid-area: footer;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* RESPONSIVE DESIGN (Sub-bab 3.8) */
+
+/* Untuk Tablet & Laptop (Lebih dari 768px) */
+@media screen and (min-width: 768px) {
+    .grid-container {
+        /* Sidebar di kiri (1fr), Main di kanan (3fr) */
+        grid-template-columns: 1fr 3fr; 
+        
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "sidebar main"
+            "footer footer";
+    }
+}
+
+/* Untuk Desktop Besar (Lebih dari 1024px) */
+@media screen and (min-width: 1024px) {
+    .grid-container {
+        max-width: 1100px;
+        margin: 20px auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+</pre>
+                <br>
+                <hr>
+                <br>
+                <h3>Bedah Teknis Implementasi</h3>
+                <p>Berdasarkan hasil praktik, terdapat lima poin utama analisis teknis mengapa metode ini digunakan:</p>
+                <ul class="content-list">
+                    <li><strong>Penerapan Box-Sizing:</strong> Penggunaan <code>border-box</code> sangat krusial agar lebar elemen tetap konsisten meskipun ditambahkan padding.</li>
+                    <li><strong>Efisiensi Grid-Area:</strong> Teknik ini mempermudah perubahan tata letak pada Media Query hanya dengan mengatur ulang deklarasi area tanpa perlu menghitung kolom secara rumit.</li>
+                    <li><strong>Kombinasi Grid dan Flexbox:</strong> Grid digunakan untuk kerangka besar (makro layout), sedangkan Flexbox digunakan untuk perataan item navigasi yang lebih fleksibel (mikro layout).</li>
+                    <li><strong>Optimasi Visual:</strong> Penggunaan gradasi dan bayangan memberikan dimensi visual tanpa memerlukan gambar eksternal, sehingga website tetap ringan.</li>
+                    <li><strong>Strategi Mobile-First:</strong> Gaya dasar dirancang untuk satu kolom agar perangkat dengan bandwidth rendah memproses kode yang paling sederhana terlebih dahulu.</li>
+                </ul>
 
                 <!-- Navigation -->
                 <div class="nav-page">

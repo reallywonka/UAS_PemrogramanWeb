@@ -119,9 +119,73 @@
                     <span>BAB 3 - 3.6 Estetika Visual: Warna, Tipografi, dan Ikon Web</span>
                 </div>
 
-                <h1>3.6 Estetika Visual: Warna, Tipografi, dan Ikon Web</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <h1>3.6 Estetika Visual: Warna, Tipografi, dan Ikon Web</h1>  
+                <p>
+                    Estetika visual adalah elemen kunci dalam mempertahankan perhatian pengguna. Website yang fungsional tetapi buruk secara visual akan sulit menarik minat pengunjung.
+                </p>
+
+                <h3>1. Sistem Warna</h3>
+                <p>CSS3 mendukung berbagai format warna yang lebih fleksibel:</p>
+                <ul class="content-list">
+                    <li><strong>HEX/RGB:</strong> Format tradisional (contoh: <code>#FF0000</code> atau <code>rgb(255, 0, 0)</code>).</li>
+                    <li><strong>RGBA:</strong> Format modern yang mendukung transparansi (Alpha channel). Contoh: <code>rgba(0, 0, 0, 0.5)</code> untuk hitam transparan 50%.</li>
+                    <li><strong>HSL:</strong> (Hue, Saturation, Lightness) yang lebih intuitif bagi desainer untuk mengatur kecerahan dan saturasi warna.</li>
+                </ul>
+
+                <h3>2. Typography Lanjut</h3>
+                <p>Selain font standar, kita bisa menggunakan font kustom dan mengatur properti teks lebih detail:</p>
+                <ul class="content-list">
+                    <li><strong>@font-face:</strong> Aturan untuk memuat font kustom dari file lokal atau server.</li>
+                    <li><strong>font-weight:</strong> Mengatur ketebalan huruf (range 100 tipis - 900 sangat tebal).</li>
+                    <li><strong>line-height:</strong> Mengatur spasi antar baris paragraf untuk meningkatkan keterbacaan (readability).</li>
+                    <li><strong>letter-spacing:</strong> Mengatur jarak antar karakter huruf.</li>
+                </ul>
+
+                <h3>3. Ikon Web</h3>
+                <p>
+                    Penggunaan gambar (.png/.jpg) untuk ikon mulai ditinggalkan. Modern web menggunakan:
+                </p>
+                <ul class="content-list">
+                    <li><strong>Icon Font:</strong> Seperti Font Awesome, di mana ikon diperlakukan sebagai teks.</li>
+                    <li><strong>SVG (Scalable Vector Graphics):</strong> Format vektor yang tidak akan pecah (blur) saat diperbesar, sangat efisien dan ringan.</li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>Contoh Implementasi Code:</h3>
+<pre>
+/* --- 1. SISTEM WARNA --- */
+.kotak-transparan {
+    /* Latar belakang merah dengan transparansi 50% */
+    background-color: rgba(255, 0, 0, 0.5); 
+    
+    /* Warna teks menggunakan HSL */
+    color: hsl(200, 100%, 50%); 
+}
+
+/* --- 2. TIPOGRAFI LANJUT --- */
+/* Memanggil font kustom */
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+p {
+    font-family: 'PoppinsRegular', sans-serif;
+    font-weight: 300;       /* Ketebalan */
+    line-height: 1.6;       /* Jarak antar baris (nyaman dibaca) */
+    letter-spacing: 0.5px;  /* Jarak antar huruf */
+}
+
+/* --- 3. CONTOH PENGGUNAAN IKON (Font Awesome) --- */
+/* Di HTML: <i class="fas fa-home"></i> 
+   Ini akan memunculkan ikon rumah
+*/
+.ikon-menu {
+    font-size: 24px;
+    color: #333;
+}
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

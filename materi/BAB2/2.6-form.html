@@ -120,8 +120,82 @@
                 </div>
 
                 <h1>2.6 Form dan Input</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>Formulir adalah komponen vital interaksi pengguna. HTML5 merevolusi formulir dengan validasi bawaan (native validation) yang membuat pengumpulan data lebih akurat dan mudah.</p>
+                <h3>Fitur Utama HTML5 Form:</h3>
+                <ul>
+                    <li>
+                        <strong>Tipe Input Baru:</strong> 
+                        <br> - <code class="inline">type="email"</code>: Memastikan format email benar (ada @ dan domain).
+                        <br> - <code class="inline">type="date"</code>: Menampilkan pemilih tanggal (calendar picker).
+                        <br> - <code class="inline">type="number"</code>: Hanya menerima angka dan memunculkan numpad di HP.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Atribut Validasi:</strong> 
+                        <br> - <code class="inline">required</code>: Memaksa pengguna mengisi kolom (tidak boleh kosong).
+                        <br> - <code class="inline">placeholder</code>: Memberikan teks bayangan sebagai petunjuk format.
+                    </li>
+                </ul>
+
+                <br>
+                <h3>Implementasi Kode Lengkap:</h3>
+                <p>Berikut adalah contoh formulir pendaftaran mahasiswa dengan validasi HTML5:</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Formulir Pendaftaran Mahasiswa&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h2&gt;Formulir Registrasi Anggota&lt;/h2&gt;
+        &lt;!-- method="POST" untuk mengirim data secara aman --&gt;
+        &lt;form action="#" method="POST" autocomplete="off"&gt;
+    
+            &lt;label for="nama"&gt;Nama Lengkap:&lt;/label&gt;&lt;br&gt;
+            &lt;!-- required: wajib diisi --&gt;
+            &lt;input type="text" id="nama" name="nama" 
+                placeholder="Masukkan nama lengkap..." required&gt;
+            &lt;br&gt;&lt;br&gt;
+    
+            &lt;label for="email"&gt;Alamat Email:&lt;/label&gt;&lt;br&gt;
+            &lt;!-- type="email": validasi format email otomatis --&gt;
+            &lt;input type="email" id="email" name="email" 
+                placeholder="contoh: egi@unpam.com" required&gt;
+            &lt;br&gt;&lt;br&gt;
+    
+            &lt;label for="tgl_lahir"&gt;Tanggal Lahir:&lt;/label&gt;&lt;br&gt;
+            &lt;!-- type="date": memunculkan kalender --&gt;
+            &lt;input type="date" id="tgl_lahir" name="tgl_lahir"&gt;
+            &lt;br&gt;&lt;br&gt;
+    
+            &lt;label for="smt"&gt;Semester Saat Ini:&lt;/label&gt;&lt;br&gt;
+            &lt;!-- type="number" dengan batasan min dan max --&gt;
+            &lt;input type="number" id="smt" name="semester" 
+                min="1" max="8" placeholder="1 - 8"&gt;
+            &lt;br&gt;&lt;br&gt;
+    
+            &lt;label for="prodi"&gt;Program Studi:&lt;/label&gt;&lt;br&gt;
+            &lt;!-- Select untuk pilihan dropdown --&gt;
+            &lt;select id="prodi" name="prodi"&gt;
+                &lt;option value="TI"&gt;Teknik Informatika&lt;/option&gt;
+                &lt;option value="SI"&gt;Sistem Informasi&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br&gt;&lt;br&gt;
+    
+            &lt;label for="alamat"&gt;Alamat Lengkap:&lt;/label&gt;&lt;br&gt;
+            &lt;!-- Textarea untuk input teks panjang --&gt;
+            &lt;textarea id="alamat" name="alamat" rows="4" 
+                    placeholder="Jalan..."&gt;&lt;/textarea&gt;
+            &lt;br&gt;&lt;br&gt;
+    
+            &lt;button type="submit"&gt;Daftar Sekarang&lt;/button&gt;
+    
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

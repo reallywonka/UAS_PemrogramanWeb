@@ -122,6 +122,70 @@
                 <h1>2.3 Hierarki Tags HTML5</h1>
                 
                 <!-- KONTEN DI SINI -->
+                <p>
+                    Dalam HTML5, penggunaan elemen semantik sangat penting untuk membedakan tingkat kepentingan informasi.
+                    Hal ini membantu mesin pencari (SEO) dan pembaca layar memahami struktur dokumen Anda.
+                </p>
+
+                <h3>Elemen Utama Hierarki Teks:</h3>
+                <ul>
+                    <li>
+                        <strong>Heading (<code>&lt;h1&gt;</code> hingga <code>&lt;h6&gt;</code>):</strong> 
+                        Digunakan untuk judul dan sub-judul. 
+                        <br>
+                        - <code class="inline">&lt;h1&gt;</code> digunakan untuk <strong>judul utama</strong> (sebaiknya hanya satu per halaman).
+                        <br>
+                        - <code class="inline">&lt;h2&gt;</code> sampai <code class="inline">&lt;h6&gt;</code> digunakan untuk sub-bab berikutnya sesuai level kedalamannya.
+                    </li>
+                    <li>
+                        <strong>Paragraph (<code>&lt;p&gt;</code>):</strong> 
+                        Digunakan untuk membuat blok teks atau paragraf. Browser secara otomatis akan memberikan jarak (margin) sebelum dan sesudah elemen ini agar tulisan enak dibaca.
+                    </li>
+                    <li>
+                        <strong>Format Teks:</strong> 
+                        Digunakan untuk memberikan penekanan pada kata atau kalimat tertentu.
+                        <br>
+                        - <code class="inline">&lt;strong&gt;</code> : Memberikan penekanan kuat (biasanya ditampilkan <strong>tebal/bold</strong>).
+                        <br>
+                        - <code class="inline">&lt;em&gt;</code> : Memberikan penekanan emosional/italic (biasanya ditampilkan <em>miring</em>).
+                    </li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+
+                <h3>Implementasi Kode Teks</h3>
+                <p>Berikut adalah contoh bagaimana tag-tag tersebut disusun dalam sebuah dokumen HTML:</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Elemen Teks&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Judul Utama Halaman --&gt;
+        &lt;h1&gt;Judul Artikel Utama (H1)&lt;/h1&gt;
+
+        &lt;!-- Sub Judul --&gt;
+        &lt;h2&gt;Sub Judul Pembahasan (H2)&lt;/h2&gt;
+
+        &lt;!-- Paragraf dengan format teks --&gt;
+        &lt;p&gt;
+            Ini adalah paragraf pertama. Kita bisa membuat teks menjadi 
+            &lt;strong&gt;tebal (bold)&lt;/strong&gt; untuk kata yang penting, 
+            atau &lt;em&gt;miring (italic)&lt;/em&gt; untuk penekanan.
+        &lt;/p&gt;
+        <br>
+        &lt;!-- Paragraf kedua --&gt;
+        &lt;p&gt;
+            Paragraf kedua otomatis memiliki jarak (margin) 
+            dari paragraf sebelumnya.
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

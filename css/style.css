@@ -1119,7 +1119,7 @@ body.dark .footer-bottom p {
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 10px 0;
   font-size: 0.95em;
   border-radius: 8px;
   overflow: hidden;
@@ -1177,4 +1177,74 @@ body.dark .comparison-table tbody tr:last-of-type {
   .comparison-table th, .comparison-table td {
       padding: 8px 10px;
   }
+}
+
+/* ========== COPY CODE BUTTON ========== */
+.code-wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+
+.code-wrapper pre {
+  margin: 0 !important;
+  padding-top: 40px; 
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.copy-btn:hover {
+  background-color: var(--blue);
+  color: var(--yellow);
+  border-color: var(--blue);
+}
+
+body.dark .copy-btn {
+  background-color: var(--gray);
+  color: var(--black);
+  border-color: #3e3e42;
+}
+
+body.dark .copy-btn:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+
+/* Contoh tombol untuk demo visual */
+.demo-btn {
+    padding: 15px 30px;
+    background: var(--blue);
+    border: none;
+    color: var(--light-blue);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    display: inline-block;
+}
+.demo-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    color: var(--blue);
+    background-color: var(--yellow);
 }

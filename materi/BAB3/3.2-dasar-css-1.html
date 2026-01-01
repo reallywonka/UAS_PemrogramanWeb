@@ -120,8 +120,83 @@
                 </div>
 
                 <h1>3.2 Dasar CSS3: Selektor, Hierarki, dan Box-Sizing</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    <strong>Selector</strong> adalah cara pengembang menunjuk elemen HTML tertentu untuk diberikan gaya. 
+                    Tanpa selector, browser tidak akan tahu elemen mana yang harus diubah warnanya, ukurannya, atau posisinya.
+                </p>
+                <h3>1. Specificity (Hierarki Selektor)</h3>
+                <p>
+                    Browser menentukan prioritas gaya berdasarkan bobot selektor. Jika ada dua aturan CSS yang bertabrakan, browser akan memilih yang memiliki bobot (specificity) paling tinggi.
+                </p>
+                <p>Urutannya dari yang terendah ke tertinggi adalah:</p>
+                <ul class="content-list">
+                    <li>
+                        <strong>Elemen Selector:</strong> Menunjuk tag HTML langsung (contoh: <code class="inline">p</code>, <code class="inline">h1</code>). Bobot paling rendah.
+                    </li>
+                    <li>
+                        <strong>Class Selector:</strong> Menunjuk atribut class (contoh: <code class="inline">.btn-primary</code>). Bobot menengah.
+                    </li>
+                    <li>
+                        <strong>ID Selector:</strong> Menunjuk atribut id unik (contoh: <code class="inline">#header-utama</code>). Bobot tinggi.
+                    </li>
+                    <li>
+                        <strong>Inline Styles:</strong> Gaya yang ditulis langsung di dalam tag HTML (contoh: <code class="inline">style="color: red;"</code>). Bobot tertinggi (sangat sulit ditimpa).
+                    </li>
+                </ul>
+
+                <h3>2. Property Box-Sizing</h3>
+                <p>
+                    Property ini sangat krusial dalam menghitung lebar elemen. Seringkali layout berantakan karena perhitungan lebar yang salah.
+                </p>
+                <ul class="content-list">
+                    <li>
+                        <strong>content-box (Default):</strong> 
+                        Lebar kotak elemen adalah lebar konten saja. Jika kita menambahkan padding dan border, ukuran total elemen akan membesar.
+                        <br><em>Rumus: Total Lebar = width + padding + border.</em>
+                    </li>
+                    <li>
+                        <strong>border-box (Recommended):</strong> 
+                        Lebar total elemen sudah mencakup padding dan border. Ukuran kotak tetap konsisten sesuai dengan <code class="inline">width</code> yang kita tentukan.
+                        <br><em>Ini adalah praktik terbaik (best practice) dalam CSS modern.</em>
+                    </li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>Contoh Implementasi CSS</h3>
+                <p>Berikut adalah contoh kode CSS untuk memahami konsep di atas:</p>
+
+<pre>
+/* 1. Element Selector (Prioritas Rendah) */
+p {
+    color: black;
+}
+
+/* 2. Class Selector (Prioritas Sedang - akan menimpa Element) */
+.teks-biru {
+    color: blue;
+}
+
+/* 3. ID Selector (Prioritas Tinggi - akan menimpa Class) */
+#judul-utama {
+    color: red;
+}
+
+/* 4. Best Practice Box-Sizing */
+* {
+    /* Menerapkan border-box ke SELURUH elemen */
+    box-sizing: border-box; 
+}
+
+.kotak {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    
+    /* Dengan border-box, total lebar tetap 200px. */
+    /* Jika content-box, total lebar jadi 250px (200 + 40 + 10) */
+}
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

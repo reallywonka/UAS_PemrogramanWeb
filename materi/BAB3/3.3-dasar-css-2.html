@@ -120,8 +120,48 @@
                 </div>
 
                 <h1>3.3 Dasar CSS3: Box Model, Margin, Padding, dan Border</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>
+                    Setiap elemen HTML dianggap sebagai kotak persegi panjang (Box) yang terdiri dari empat lapisan pelindung. 
+                    Memahami konsep ini sangat penting untuk mengatur tata letak yang presisi.
+                </p>
+                <ul class="content-list">
+                    <li>
+                        <strong>1. Content:</strong> Area ini tempat teks, gambar, atau elemen lain berada.
+                    </li>
+                    <li>
+                        <strong>2. Padding:</strong> Ruang transparan di antara konten dan garis tepi (border). Padding memberi "nafas" di dalam kotak.
+                    </li>
+                    <li>
+                        <strong>3. Border:</strong> Garis tepi yang mengelilingi padding dan konten.
+                    </li>
+                    <li>
+                        <strong>4. Margin:</strong> Ruang kosong di luar border yang memisahkan satu elemen dengan elemen lainnya (jarak antar elemen).
+                    </li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>Analisa Kode Box Model:</h3>
+                <p>Berikut adalah contoh penerapan CSS untuk membuat kartu mahasiswa:</p>
+
+<pre>
+.card-mahasiswa {
+    width: 300px;
+    
+    /* Memberi nafas pada konten agar tidak menempel ke garis */
+    padding: 20px;
+    
+    /* Memberi batas visual dengan warna biru */
+    border: 2px solid #0044cc;
+    
+    /* Memberi jarak antar kartu agar tidak berdempetan */
+    margin-bottom: 30px;
+    
+    /* PENTING: Memastikan lebar total tetap 300px 
+       (termasuk padding dan border) */
+    box-sizing: border-box; 
+}
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

@@ -120,8 +120,89 @@
                 </div>
 
                 <h1>2.4 Hyperlinks</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>Elemen-elemen ini membuat website menjadi kaya secara visual dan fungsional. Berikut penjelasannya:</p>
+                <ul>
+                    <li>
+                        <strong>Hyperlink (<code class="inline">&lt;a&gt;</code>):</strong> 
+                        Digunakan untuk menghubungkan satu halaman ke halaman lain menggunakan alamat <em>absolut</em> (luar situs) atau <em>relatif</em> (dalam folder proyek).
+                    </li>
+                    <li>
+                        <strong>List (Daftar):</strong> 
+                        Terdiri dari <code class="inline">&lt;ul&gt;</code> (Unordered List/poin bulat) dan <code class="inline">&lt;ol&gt;</code> (Ordered List/urutan angka/huruf).
+                    </li>
+                    <li>
+                        <strong>Gambar (<code class="inline">&lt;img&gt;</code>):</strong> 
+                        Di HTML5 modern, gambar yang memiliki keterangan (caption) sebaiknya dibungkus dengan elemen <code class="inline">&lt;figure&gt;</code> dan <code class="inline">&lt;figcaption&gt;</code> agar memiliki makna semantik.
+                    </li>
+                </ul>
+
+                <br>
+                <h3>Implementasi Kode Lengkap:</h3>
+                <p>Salin kode di bawah ini untuk melihat bagaimana Link, List, dan Gambar bekerja bersama:</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Latihan Link, List, dan Gambar&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 1. IMPLEMENTASI HYPERLINK --&gt;
+        &lt;h2&gt;1. Implementasi Hyperlink&lt;/h2&gt;
+        
+        &lt;p&gt;
+            Link Website Kampus: 
+            &lt;a href="https://unpam.ac.id/" target="_blank" title="Kunjungi Website Resmi Unpam"&gt;
+                Universitas Pamulang
+            &lt;/a&gt;
+        &lt;/p&gt;
+    
+        &lt;p&gt;
+            Link Latihan Sebelumnya: 
+            &lt;a href="latihan_teks.html" title="Buka File Latihan Teks"&gt;
+                Kembali ke Materi Teks
+            &lt;/a&gt;
+        &lt;/p&gt;
+    
+        &lt;hr&gt; &lt;!-- Garis Pembatas --&gt;
+
+        &lt;!-- 2. IMPLEMENTASI NESTED LIST (List Bersarang) --&gt;
+        &lt;h2&gt;2. Implementasi Nested List&lt;/h2&gt;
+        &lt;h3&gt;Struktur Materi Kuliah (Ordered List):&lt;/h3&gt;
+    
+        &lt;ol&gt;
+            &lt;li&gt;Semester 1
+                &lt;!-- List di dalam list --&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Pengantar Teknologi Informasi&lt;/li&gt;
+                    &lt;li&gt;Algoritma dan Pemrograman&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Semester 5
+                &lt;ul&gt;
+                    &lt;li&gt;Pemrograman Web 1&lt;/li&gt;
+                    &lt;li&gt;Metodologi Penelitian&lt;/li&gt;
+                    &lt;li&gt;Sistem Pakar&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;hr&gt;
+
+        &lt;!-- 3. IMPLEMENTASI GAMBAR --&gt;
+        &lt;h2&gt;3. Implementasi Gambar Logo&lt;/h2&gt;
+        &lt;figure&gt;
+            &lt;!-- Pastikan file gambar ada di folder --&gt;
+            &lt;img src="logo_unpam.PNG" alt="Logo Universitas Pamulang" width="200"&gt;
+            
+            &lt;figcaption&gt;
+                &lt;strong&gt;Gambar 2.3:&lt;/strong&gt; Logo Universitas Pamulang (Format PNG).
+            &lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">

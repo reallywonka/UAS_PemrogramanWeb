@@ -120,8 +120,114 @@
                 </div>
 
                 <h1>2.5 Penyajian Data</h1>
+                <p>Pada sub-bab ini, kita akan mempelajari cara menyajikan data yang kompleks dan media interaktif:</p>
+                <ul>
+                    <li>
+                        <strong>Struktur Tabel Lanjut:</strong> 
+                        Tabel yang baik harus memenuhi prinsip aksesibilitas dengan pembagian yang jelas:
+                        <br> - <code class="inline">&lt;thead&gt;</code> (Header/Kepala tabel).
+                        <br> - <code class="inline">&lt;tbody&gt;</code> (Body/Data utama).
+                        <br> - <code class="inline">&lt;tfoot&gt;</code> (Footer/Catatan kaki atau total).
+                        <br> HTML5 juga mendukung penggabungan sel secara vertikal (<code class="inline">rowspan</code>) dan horizontal (<code class="inline">colspan</code>).
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Multimedia:</strong> 
+                        Fitur bawaan tag <code class="inline">&lt;audio&gt;</code> dan <code class="inline">&lt;video&gt;</code> memberikan antarmuka pemutar (Play, Pause, Volume) yang konsisten tanpa bantuan software tambahan (plugin).
+                    </li>
+                </ul>
+                <br>
+                <h3>Implementasi Kode Lengkap:</h3>
+                <p>Berikut adalah contoh kode untuk membuat Tabel Data Akademik dan menyisipkan Video/Audio:</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Latihan Tabel Lanjut & Multimedia&lt;/title&gt;
+        &lt;style&gt;
+            /* CSS INTERNAL: untuk mempercantik tabel */
+            table { 
+                width: 80%;
+                border-collapse: collapse; 
+                margin-bottom: 20px; 
+            }
+            th, td { 
+                border: 1px solid black; 
+                padding: 10px; 
+                text-align: left;
+            }
+            th { background-color: #f2f2f2; }
+            tfoot { font-weight: bold; background-color: #ddd; }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 1. CONTOH TABEL LANJUT --&gt;
+        &lt;h2&gt;1. Data Akademik Mahasiswa&lt;/h2&gt;
+        &lt;table&gt;
+            &lt;!-- Kepala Tabel --&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;No.&lt;/th&gt;
+                    &lt;th&gt;NIM&lt;/th&gt;
+                    &lt;th&gt;Nama Lengkap&lt;/th&gt;
+                    &lt;th&gt;Program Studi&lt;/th&gt;
+                    &lt;th&gt;Nilai&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+    
+            &lt;!-- Isi Data Tabel --&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;231011400722&lt;/td&gt;
+                    &lt;td&gt;Egi Witra Aditya&lt;/td&gt;
+                    &lt;!-- rowspan="3" artinya menggabungkan 3 baris ke bawah --&gt;
+                    &lt;td rowspan="3" style="vertical-align: middle;"&gt;Teknik Informatika&lt;/td&gt;
+                    &lt;td&gt;95 (A)&lt;/td&gt;
+                &lt;/tr&gt;
                 
-                <!-- KONTEN DI SINI -->
+                &lt;tr&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;231011400741&lt;/td&gt;
+                    &lt;td&gt;Fajar&lt;/td&gt;
+                    &lt;!-- Kolom Prodi di sini hilang karena sudah digabung di atas --&gt;
+                    &lt;td&gt;95 (A)&lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                    &lt;td&gt;231011401821&lt;/td&gt;
+                    &lt;td&gt;Arshanda Amudhia&lt;/td&gt;
+                    &lt;td&gt;90 (A)&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    
+        &lt;hr&gt;
+    
+        &lt;!-- 2. CONTOH MULTIMEDIA --&gt;
+        &lt;h2&gt;2. Multimedia Kampus&lt;/h2&gt;
+    
+        &lt;h3&gt;Lagu Mars Universitas Pamulang&lt;/h3&gt;
+        &lt;!-- Tag Audio dengan kontrol --&gt;
+        &lt;audio controls&gt;
+            &lt;source src="mars_unpam.mp3" type="audio/mpeg"&gt;
+            Browser Anda tidak mendukung elemen audio.
+        &lt;/audio&gt;
+    
+        &lt;br&gt;&lt;br&gt;
+    
+        &lt;h3&gt;Video Profil Universitas Pamulang&lt;/h3&gt;
+        &lt;!-- Tag Video dengan kontrol & lebar 500px --&gt;
+        &lt;video width="500" controls&gt;
+            &lt;source src="vidio_unpam.MP4" type="video/mp4"&gt;
+            Browser Anda tidak mendukung elemen video.
+        &lt;/video&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
                 <!-- Navigation -->
                 <div class="nav-page">
