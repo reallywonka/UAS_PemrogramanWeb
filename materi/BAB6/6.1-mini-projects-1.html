@@ -120,8 +120,231 @@
                 </div>
 
                 <h1>6.1 Mini Project 1: Merancang Portofolio dengan HTML5 dan CSS3</h1>
-                
-                <!-- KONTEN DI SINI -->
+                <p>Proyek mini pertama ini bertujuan melatih kemampuan dalam Menyusun struktur semantic HTML5 dan penataan letak (layouting) menggunakan Pure CSS3 tanpa bantuan framework eksternal. Hal ini krusial untuk memahami dasar dari Box Model dan sitem Flexbox.</p>
+
+                <ol type="a">
+                    <li>Langkah-langkah pengerjaan:</li>
+                    <ol>
+                        <li>Analisis struktur (wire framing): menentukan bagian utama website seperti Navbar, Hero, About, Skill, dan Footer.</li>
+                        <li>Inisialisasi Folder: menyiapkan struktur folder yang terdiri dari index.html, style.css, dan folder img/.</li>
+                        <li>Pengaturan Reset CSS: menghilangkan margin dan padding bawaan browser agar tampilan konsisten.</li>
+                        <li>Implementasi Flexbox: menggunakan display: flex untuk mengatur posisi elemen agar sejajar dan rapi</li>
+                        <li>Desain Responsif: menambangkan Media Queries untuk memastikan tampilan tetap bagus di ponsel atau tablet.</li>
+                    </ol>
+
+                    <li>Implementasi Kodingan HTML5 (index.html)</li>
+                    <p>Kodingan di bawah ini merupakan struktur dasar portofolio yang menggunakan tag semantic untuk meningkatkan kualitas SEO dan aksesibilitas.</p>
+                    <p>File: index.html</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Portofolio Profesional | Egi Witra Aditya&lt;/title&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;header&gt;
+            &lt;nav class="container"&gt;
+                &lt;div class="logo"&gt;Egi&lt;span&gt;Witra&lt;/span&gt;&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#about"&gt;Tentang&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#skills"&gt;Keahlian&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#contact" class="btn-contact"&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+
+        &lt;section id="home" class="hero container"&gt;
+            &lt;div class="hero-content"&gt;
+                &lt;h1&gt;Halo, Saya &lt;br&gt;&lt;span&gt;Egi Witra Aditya&lt;/span&gt;&lt;/h1&gt;
+                &lt;p&gt;Mahasiswa Teknik Informatika S-1 di Universitas Pamulang yang fokus pada Pengembangan Web dan Desain UI/UX.&lt;/p&gt;
+                &lt;a href="#" class="cta-button"&gt;Lihat Karya&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="hero-image"&gt;
+                &lt;img src="img/foto_profil.jpg" alt="Foto Egi Witra Aditya"&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="about" class="about container text-center"&gt;
+            &lt;h2&gt;Tentang Saya&lt;/h2&gt;
+            &lt;p&gt;Saya adalah seorang pengembang web pemula yang antusias dalam mempelajari teknologi terbaru. Saya percaya bahwa kode yang bersih dan desain yang baik adalah kunci dari website yang sukses.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section id="skills" class="skills container"&gt;
+            &lt;h2 class="text-center"&gt;Keahlian&lt;/h2&gt;
+            &lt;div class="skills-grid"&gt;
+                &lt;div class="skill-card"&gt;
+                    &lt;h3&gt;HTML5&lt;/h3&gt;
+                    &lt;p&gt;Menyusun struktur web yang semantik dan standar.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="skill-card"&gt;
+                    &lt;h3&gt;CSS3&lt;/h3&gt;
+                    &lt;p&gt;Mendesain tampilan responsif dengan Flexbox dan Grid.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="skill-card"&gt;
+                    &lt;h3&gt;Bootstrap&lt;/h3&gt;
+                    &lt;p&gt;Mempercepat pengembangan UI dengan komponen siap pakai.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;footer&gt;
+            &lt;p&gt;&copy; 2025 Egi Witra Aditya. Dibuat dengan HTML & CSS Murni.&lt;/p&gt;
+        &lt;/footer&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<br>
+                    <li>Implementasi Gaya CSS3 (style.css)</li>
+                    <p>Penjelasan gaya ini berfokus pada penggunaan variable warna dan sistem Flexbox untuk memciptakan tampilan modern.</p>
+                    <p>File: style.css</p>
+<pre>
+/* Pengaturan Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    --primary-color: #2563eb;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+    --text-color: #475569;
+}
+ 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+}
+ 
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+ 
+.text-center { text-align: center; }
+ 
+/* Navigasi */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+ 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+ 
+.logo span { color: var(--primary-color); }
+ 
+nav ul { display: flex; list-style: none; }
+ 
+nav ul li { margin-left: 20px; }
+ 
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 400;
+    transition: 0.3s;
+}
+ 
+nav ul li a:hover { color: var(--primary-color); }
+ 
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    min-height: 80vh;
+}
+ 
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+ 
+.hero-content span { color: var(--primary-color); }
+ 
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+ 
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+ 
+.skill-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.3s;
+}
+ 
+.skill-card:hover { transform: translateY(-10px); }
+ 
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 5rem;
+}
+ 
+/* Media Query untuk Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; 
+        text-align: center; 
+    }
+    .hero-content h1 {
+        font-size: 2rem; 
+    }
+    nav ul { 
+        display: none; 
+    } /* Untuk penyederhanaan makalah */
+}
+</pre>
+
+<br>
+                    <li>Analisis Teknik Hasil Proyek</li>
+                    <p>Penerapan kode memghasilkan website portofolio dengan performa cepat karena tidak memuat script eksternal yang berat. Penggunaan Sticky Navbar dan Hover Effect memberikan kenyamanan navigasi dan umpan balik visual yang menarik.</p>
+                </ol>
 
                 <!-- Navigation -->
                 <div class="nav-page">
