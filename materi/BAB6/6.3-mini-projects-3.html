@@ -120,8 +120,148 @@
                 </div>
 
                 <h1>6.3 Mini Project 3: Membuat Blog Sederhana dengan CSS</h1>
+                <p>Proyek ini bertujuan melatih mahasiswa menggunakan kelas-kelas utilitas <strong>Tailwind CSS</strong> untuk membangun tata letak Card yang kompleks tanpa menulis file .css tambahan.</p>
+                <ol type="a">
+                    <li><strong>Konfigurasi CDN Tailwind</strong></li>
+                    <p>Karena ini adalah proyek skala kecil, kita akan menggunakan CDN script. Namun, perlu dicatat bahwa untuk tahap produksi (profesional), disarankan menggunakan instalasi via NPM/Node.js.</p>
+
+                    <li><strong>Kode Implementasi Blog</strong></li>
+                    <p>Buat file baru bernama <code>blog_tailwind.html</code> dan salin kode berikut ini:</p>
+                </ol>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Blog Mahasiswa TI - Tailwind CSS&lt;/title&gt;
+        
+        <span class="code-comment">&lt;!-- 1. MENGHUBUNGKAN TAILWIND VIA CDN --&gt;</span>
+        &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+        
+        <span class="code-comment">&lt;!-- 2. KONFIGURASI TEMA KUSTOM --&gt;</span>
+        &lt;script&gt;
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            unpamBlue: '#1e3a8a', /* Menambahkan warna kustom */
+                        }
+                    }
+                }
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body class="bg-gray-50 font-sans"&gt;
+    
+        <span class="code-comment">&lt;!-- BAGIAN HEADER & NAVBAR --&gt;</span>
+        &lt;header class="bg-white shadow-md sticky top-0 z-50"&gt;
+            &lt;div class="container mx-auto px-6 py-4 flex justify-between items-center"&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class="font-bold text-2xl text-unpamBlue"&gt;Blog&lt;span class="text-orange-500"&gt;TI&lt;/span&gt;&lt;/div&gt;
                 
-                <!-- KONTEN DI SINI -->
+                &lt;!-- Menu Navigasi --&gt;
+                &lt;nav class="hidden md:flex space-x-6"&gt;
+                    &lt;a href="#" class="text-gray-600 hover:text-unpamBlue transition"&gt;Tutorial&lt;/a&gt;
+                    &lt;a href="#" class="text-gray-600 hover:text-unpamBlue transition"&gt;Berita AI&lt;/a&gt;
+                    &lt;a href="#" class="text-gray-600 hover:text-unpamBlue transition"&gt;Review Gadget&lt;/a&gt;
+                &lt;/nav&gt;
+                
+                &lt;!-- Tombol Subscribe --&gt;
+                &lt;a href="#" class="bg-unpamBlue text-white px-5 py-2 rounded-full hover:bg-blue-800 transition"&gt;Subscribe&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+    
+        <span class="code-comment">&lt;!-- BAGIAN KONTEN UTAMA --&gt;</span>
+        &lt;main class="container mx-auto px-6 py-10"&gt;
+            
+            <span class="code-comment">&lt;!-- ARTIKEL UTAMA (FEATURED POST) --&gt;</span>
+            &lt;div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 flex flex-col md:flex-row"&gt;
+                &lt;div class="md:w-1/2"&gt;
+                    &lt;img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80" 
+                        alt="Web 3.0 Blockchain" class="w-full h-64 md:h-full object-cover"&gt;
+                &lt;/div&gt;
+                &lt;div class="md:w-1/2 p-8 flex flex-col justify-center"&gt;
+                    &lt;span class="text-blue-500 font-semibold text-sm tracking-wide uppercase"&gt;Artikel Utama&lt;/span&gt;
+                    &lt;h2 class="text-3xl font-bold text-gray-800 mt-2 mb-4"&gt;Masa Depan Web 3.0 dan Blockchain&lt;/h2&gt;
+                    &lt;p class="text-gray-600 mb-6"&gt;Web 3.0 menjanjikan internet yang terdesentralisasi. Bagaimana dampaknya bagi pengembang web di Indonesia? Simak ulasan lengkapnya di sini.&lt;/p&gt;
+                    &lt;a href="#" class="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition w-max"&gt;Baca Selengkapnya&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+    
+            <span class="code-comment">&lt;!-- DAFTAR ARTIKEL TERBARU (GRID LAYOUT) --&gt;</span>
+            &lt;h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-orange-500 pl-3"&gt;Artikel Terbaru&lt;/h3&gt;
+            &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"&gt;
+                
+                <span class="code-comment">&lt;!-- KARTU ARTIKEL 1 --&gt;</span>
+                &lt;div class="bg-white rounded-lg shadow hover:shadow-xl transition duration-300"&gt;
+                    &lt;img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=400&q=80" 
+                        alt="Coding Screen" class="w-full h-48 object-cover rounded-t-lg"&gt;
+                    &lt;div class="p-6"&gt;
+                        &lt;span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"&gt;Tutorial&lt;/span&gt;
+                        &lt;h4 class="text-xl font-bold mt-2 hover:text-blue-600 cursor-pointer"&gt;Belajar Tailwind dalam 10 Menit&lt;/h4&gt;
+                        &lt;p class="text-gray-600 mt-2 text-sm"&gt;Panduan cepat memahami konsep utility-first bagi pemula.&lt;/p&gt;
+                        &lt;div class="mt-4 flex items-center justify-between"&gt;
+                            &lt;span class="text-xs text-gray-400"&gt;28 Des 2025&lt;/span&gt;
+                            &lt;span class="text-xs text-gray-400"&gt;5 min read&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                <span class="code-comment">&lt;!-- KARTU ARTIKEL 2 --&gt;</span>
+                &lt;div class="bg-white rounded-lg shadow hover:shadow-xl transition duration-300"&gt;
+                    &lt;img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80" 
+                        alt="Artificial Intelligence" class="w-full h-48 object-cover rounded-t-lg"&gt;
+                    &lt;div class="p-6"&gt;
+                        &lt;span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full"&gt;AI News&lt;/span&gt;
+                        &lt;h4 class="text-xl font-bold mt-2 hover:text-blue-600 cursor-pointer"&gt;ChatGPT vs Gemini: Mana Lebih Cerdas?&lt;/h4&gt;
+                        &lt;p class="text-gray-600 mt-2 text-sm"&gt;Perbandingan komprehensif dua raksasa AI generatif saat ini.&lt;/p&gt;
+                        &lt;div class="mt-4 flex items-center justify-between"&gt;
+                            &lt;span class="text-xs text-gray-400"&gt;27 Des 2025&lt;/span&gt;
+                            &lt;span class="text-xs text-gray-400"&gt;3 min read&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                <span class="code-comment">&lt;!-- KARTU ARTIKEL 3 --&gt;</span>
+                &lt;div class="bg-white rounded-lg shadow hover:shadow-xl transition duration-300"&gt;
+                    &lt;img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" 
+                        alt="Laptop Programming" class="w-full h-48 object-cover rounded-t-lg"&gt;
+                    &lt;div class="p-6"&gt;
+                        &lt;span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full"&gt;Review&lt;/span&gt;
+                        &lt;h4 class="text-xl font-bold mt-2 hover:text-blue-600 cursor-pointer"&gt;Rekomendasi Laptop Coding 2025&lt;/h4&gt;
+                        &lt;p class="text-gray-600 mt-2 text-sm"&gt;Spesifikasi minimum yang wajib dimiliki mahasiswa IT agar ngoding lancar tanpa lag.&lt;/p&gt;
+                        &lt;div class="mt-4 flex items-center justify-between"&gt;
+                            &lt;span class="text-xs text-gray-400"&gt;25 Des 2025&lt;/span&gt;
+                            &lt;span class="text-xs text-gray-400"&gt;7 min read&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+            &lt;/div&gt;
+        &lt;/main&gt;
+    
+        <span class="code-comment">&lt;!-- BAGIAN FOOTER --&gt;</span>
+        &lt;footer class="bg-gray-800 text-gray-300 py-8 text-center mt-10"&gt;
+            &lt;p&gt;&copy; 2025 Kelompok 2 - Teknik Informatika UNPAM.&lt;/p&gt;
+            &lt;p class="text-sm mt-2"&gt;Dibuat dengan ❤️ menggunakan Tailwind CSS.&lt;/p&gt;
+        &lt;/footer&gt;
+    
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+                <br>
+                <h3>Perbandingan Pendekatan: Bootstrap vs Tailwind</h3>
+                <ul class="content-list">
+                    <li>
+                        <strong>Efisiensi:</strong> Bootstrap lebih cepat untuk desain standar dengan komponen jadi (seperti Navbar), sementara Tailwind memberikan kebebasan desain yang lebih unik (utility-first).
+                    </li>
+                    <li>
+                        <strong>Responsivitas:</strong> Tailwind menggunakan prefix eksplisit seperti <code>md:flex-row</code> untuk mengubah layout secara langsung di dalam kelas HTML, memberikan kontrol yang sangat granular.
+                    </li>
+                </ul>
 
                 <!-- Navigation -->
                 <div class="nav-page">

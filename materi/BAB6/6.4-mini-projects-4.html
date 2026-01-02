@@ -120,8 +120,74 @@
                 </div>
 
                 <h1>6.4 Mini Project 4: Testing dan Debugging Website</h1>
+                <p>Tahap pengujian sangat penting untuk memastikan website valid dan sesuai standar industri sebelum dipublikasikan (hosting).</p>
+
+                <h2>1. Validasi Kode HTML (W3C Validator)</h2>
+                <p>Mahasiswa diarahkan menggunakan situs <strong>validator.w3.org</strong> untuk mengecek kesalahan sintaks seperti tag yang lupa ditutup atau atribut alt pada gambar yang kosong. Kode yang valid menjamin tampilan konsisten di semua browser.</p>
                 
-                <!-- KONTEN DI SINI -->
+                <h3>Langkah-langkah Validasi:</h3>
+                <ol class="tutorial-steps">
+                    <li>
+                        Buka situs <a href="https://validator.w3.org" target="_blank">validator.w3.org</a>.
+                        
+                        <img src="../../images/tampilan_validator.png" alt="Tampilan W3C Validator" class="tutorial-img">
+                    </li>
+                    <li>
+                        Pilih tab <strong>“Validate by File Upload”</strong> jika file ada di komputer, atau <strong>“Validate by Direct Input”</strong> jika ingin copy-paste kode.
+                    </li>
+                    <li>
+                        Masukkan file <code>company_profile.html</code> atau file proyek lain yang telah dibuat, lalu klik <strong>Check</strong>.
+                        
+                        <img src="../../images/upload_file.png" alt="Proses Upload File HTML" class="tutorial-img">
+                    </li>
+                    <li>
+                        <strong>Analisis Error:</strong> Jika validator menemukan error (misalnya warna merah), baca pesan kesalahannya. Perbaiki segera di kode editor Anda. Kode yang valid (biasanya berwarna hijau) memastikan tampilan konsisten.
+                    </li>
+                </ol>
+
+                <hr>
+
+                <h2>2. Pengujian Responsif (Chrome DevTools)</h2>
+                <p>Jangan hanya menguji website dengan mengubah ukuran jendela browser secara manual (resize window). Gunakan alat profesional <strong>Chrome DevTools</strong> untuk simulasi perangkat nyata.</p>
+
+                <h3>Langkah-langkah Pengujian:</h3>
+                <ol class="tutorial-steps">
+                    <li>
+                        Buka website proyek di Google Chrome.
+                    </li>
+                    <li>
+                        Tekan <strong>F12</strong> atau klik kanan pada halaman -> pilih <strong>Inspect</strong>.
+                        
+                        <img src="../../images/menu_inspect.png" alt="Menu Inspect Element" class="tutorial-img">
+                    </li>
+                    <li>
+                        Klik ikon <strong>Device Toggle Toolbar</strong> (ikon HP/Tablet) di pojok kiri atas panel DevTools (atau tekan <code>Ctrl+Shift+M</code>).
+                        
+                        <img src="../../images/device_toggle.png" alt="Ikon Device Toggle" class="tutorial-img">
+                    </li>
+                    <li>
+                        Pilih berbagai preset perangkat pada menu dropdown bagian atas:
+                        <ul class="content-list" style="margin-top: 10px;">
+                            <li>
+                                <strong>iPhone SE / Mobile Small:</strong> Untuk layar sangat kecil.
+                                
+                                <img src="../../images/tampilan_mobile.png" alt="Tampilan Mobile iPhone SE" class="tutorial-img" style="max-width: 300px;">
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <strong>iPad Air / Tablet:</strong> Untuk layar menengah.
+                                
+                                <img src="../../images/tampilan_tablet.png" alt="Tampilan Tablet iPad Air" class="tutorial-img" style="max-width: 500px;">
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Checklist Pengujian:</h3>
+                <ul class="content-list">
+                    <li>✅ Apakah menu navigasi berubah menjadi <strong>hamburger icon</strong> di mode mobile?</li>
+                    <li>✅ Apakah teks pada hero section terbaca jelas dan <strong>tidak terpotong</strong>?</li>
+                    <li>✅ Apakah kartu grid (Grid Card) <strong>turun ke bawah (stacking)</strong> menjadi 1 kolom pada mode mobile?</li>
+                </ul>
 
                 <!-- Navigation -->
                 <div class="nav-page">

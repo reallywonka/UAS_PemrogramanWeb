@@ -194,7 +194,7 @@ body.dark .dark-mode:hover {
 
 /* Style untuk ul/li di dropdown */
 .menu-section ul {
-  list-style: none;  /* Hilangkan bullet */
+  list-style: none; /* Hilangkan bullet */
   margin: 0;
   padding: 0;
 }
@@ -348,7 +348,6 @@ figure figcaption {
   color: inherit;
   display: block;
   text-align: center;
-
 }
 
 .card:hover {
@@ -372,6 +371,29 @@ body.dark .card:hover {
   margin-top: 10px;
 }
 
+/* Avatar/Photo in card */
+.card-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  display: block;
+  border: 3px solid var(--blue);
+}
+
+body.dark .card-avatar {
+  border-color: var(--yellow);
+}
+
+/* Responsive avatar size */
+@media (max-width: 768px) {
+  .card-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* Features */
 .features {
   display: flex;
@@ -390,6 +412,11 @@ body.dark .card:hover {
 .feature h3 {
   border-bottom: 2px solid var(--gray);
   padding-bottom: 5px;
+  text-align: center;
+}
+
+.feature p {
+  text-align: center;
 }
 
 /* ========== CONTENT PAGES ========== */
@@ -742,11 +769,11 @@ body.dark .footer-bottom {
 
 /* ========== DARK MODE ========== */
 body.dark {
-  --black: #e8eaed;        /* Light text */
-  --white: #1e1e1e;        /* Dark background */
-  --gray-light: #2d2d30;   /* Card background */
-  --gray: #3e3e42;         /* Border */
-  --yellow: #ffd93d;       /* Accent (lebih terang) */
+  --black: #e8eaed; /* Light text */
+  --white: #1e1e1e; /* Dark background */
+  --gray-light: #2d2d30; /* Card background */
+  --gray: #3e3e42; /* Border */
+  --yellow: #ffd93d; /* Accent (lebih terang) */
   background-color: #1e1e1e;
   color: #e8eaed;
 }
@@ -759,12 +786,12 @@ body.dark header {
 
 body.dark .logo img,
 body.dark .logo-big {
-  filter: brightness(0) saturate(100%) invert(85%) sepia(26%) saturate(1478%) hue-rotate(357deg) brightness(106%) contrast(104%);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(26%) saturate(1478%)
+    hue-rotate(357deg) brightness(106%) contrast(104%);
 }
 
 body.dark .nav-left .menu-btn {
   color: #e8eaed;
-  
 }
 
 body.dark .nav-left .menu-btn:hover {
@@ -1115,7 +1142,6 @@ body.dark .footer-bottom p {
   }
 }
 
-
 /* ========== COMPARISON TABLE ========== */
 .comparison-table {
   width: 100%;
@@ -1138,7 +1164,7 @@ body.dark .comparison-table thead tr {
   color: var(--white);
 }
 
-.comparison-table th, 
+.comparison-table th,
 .comparison-table td {
   padding: 12px 15px;
   border-bottom: 1px solid var(--blue);
@@ -1146,7 +1172,7 @@ body.dark .comparison-table thead tr {
   border-right: 1.7px solid var(--blue);
 }
 
-body.dark .comparison-table th, 
+body.dark .comparison-table th,
 body.dark .comparison-table td {
   padding: 12px 15px;
   border-bottom: 1px solid var(--yellow);
@@ -1173,10 +1199,11 @@ body.dark .comparison-table tbody tr:last-of-type {
 /* Responsif untuk layar kecil */
 @media (max-width: 600px) {
   .comparison-table {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
-  .comparison-table th, .comparison-table td {
-      padding: 8px 10px;
+  .comparison-table th,
+  .comparison-table td {
+    padding: 8px 10px;
   }
 }
 
@@ -1188,7 +1215,7 @@ body.dark .comparison-table tbody tr:last-of-type {
 
 .code-wrapper pre {
   margin: 0 !important;
-  padding-top: 40px; 
+  padding-top: 40px;
 }
 
 .copy-btn {
@@ -1228,24 +1255,91 @@ body.dark .copy-btn:hover {
   color: var(--white);
 }
 
+/* ========== TUTORIAL IMAGES ========== */
+/* Styling untuk gambar-gambar tutorial agar responsif */
+.tutorial-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .tutorial-img {
+  border-color: #3e3e42;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling untuk ordered list pada tutorial */
+.tutorial-steps {
+  padding-left: 30px;
+}
+
+.tutorial-steps li {
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+/* Responsive adjustments untuk mobile */
+@media (max-width: 768px) {
+  .tutorial-img {
+    margin: 10px 0;
+  }
+
+  /* Override inline styles untuk gambar dengan max-width spesifik */
+  .tutorial-img[style*="max-width"] {
+    max-width: 100% !important;
+  }
+
+  .tutorial-steps {
+    padding-left: 20px;
+  }
+
+  .tutorial-steps li {
+    margin-bottom: 20px;
+  }
+}
 
 /* Contoh tombol untuk demo visual */
 .demo-btn {
-    padding: 15px 30px;
-    background: var(--blue);
-    border: none;
-    color: var(--light-blue);
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
+  padding: 15px 30px;
+  background: var(--blue);
+  border: none;
+  color: var(--light-blue);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-top: 10px;
+  display: inline-block;
 }
 .demo-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    color: var(--blue);
-    background-color: var(--yellow);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: var(--blue);
+  background-color: var(--yellow);
+}
+
+
+/* Info Boxes About*/
+.box-info-about {
+  background-color: var(--light-blue);
+  border-left: 4px solid var(--blue);
+  border-right: 4px solid var(--blue);
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 5px;
+}
+
+.box-info-about h3 {
+  margin-top: 0;
+  color: var(--blue);
+}
+
+.box-info-about p {
+  margin-bottom: 0;
+  color: var(--blue);
 }
