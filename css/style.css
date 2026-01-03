@@ -398,7 +398,7 @@ body.dark .card-avatar {
 .features {
   display: flex;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: left;
   flex-wrap: wrap;
   gap: 20px;
@@ -1342,4 +1342,16 @@ body.dark .tutorial-img {
 .box-info-about p {
   margin-bottom: 0;
   color: var(--blue);
+}
+
+body.dark .box-info-about {
+  background-color: var(--white);
+  color: var(--black);
+  border-left: 4px solid var(--yellow);
+  border-right: 4px solid var(--yellow);
+}
+
+body.dark .box-info-about h3 {
+  margin-top: 0;
+  color: var(--yellow);
 }
