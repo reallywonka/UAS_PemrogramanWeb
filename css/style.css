@@ -1,3 +1,12 @@
+/*
+Nama File: style.css
+Tanggal Mengerjakan: 10 Desember 2025 - 4 Januari 2026
+Kelas: 05TPLP017
+Kelompok: 2
+Anggota: Arshanda Amudhia (231011401821), Egi Witra Aditya (231011400722), Fajar Maulana (231011400741)
+Deskripsi: File CSS utama yang mengatur seluruh styling website termasuk color variables, typography, layout (flexbox & grid), navigation, dark mode, responsive design, dan komponen-komponen UI lainnya.
+*/
+
 /* ========== VARIABLES ========== */
 :root {
   --black: #121737;
